@@ -8,7 +8,7 @@ import com.stripe.Stripe;
 @SpringBootApplication
 public class Projecte2Application {
 	public static void main(String[] args) {
-		Stripe.apiKey = "sk_test_51QVFTTFYX4xkM0hhplA9kalCEaCEgl2pOJvMZJcvX7wPlbh805xJ50BchK3yamaoBJHG1SYAZneTSSENMUJjgWwR00J2hpJZto";
+		Stripe.apiKey = "UR STIRPE APIKEY";
 		SpringApplication.run(Projecte2Application.class, args);
 	}
 }	
