@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles/style.css" th:href="@{/styles/style.css}">
+    <link rel="stylesheet" href="../static/styles/popupError.css" th:href="@{/styles/popupError.css}">
+    <link rel="stylesheet" href="../static/styles/profile.css" th:href="@{/styles/profile.css}">
+    <link rel="stylesheet" href="../static/styles/config.css" th:href="@{/styles/config.css}">
+
+
+    <title>Perfil | Natura Mobles</title>
+    <link rel="icon" th:href="@{/imatges/logo.png}" type="image/png" sizes="32x32" S
+        media="(prefers-color-scheme: light)">
+    <link rel="icon" th:href="@{/imatges/logo1.png}" type="image/png" sizes="32x32"
+        media="(prefers-color-scheme: dark)">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+
+            <div class="toggle">
+                <a href="/taulerDeControl">
+                    <div class="logo">
+                        <img alt="Imatge amb el logo de la empresa" src="../../static/imatges/logo.png"
+                            th:src="@{/imatges/logo.png}">
+                        <h2>Natura<span class="success">Mobles</span></h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">
+                            close
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="sidebar">
+                <a href="/perfil" class="active">
+                    <span class="material-icons-sharp">
+                        person
+                    </span>
+                    <h3 th:text="#{perfil}">Perfil</h3>
+                </a>
+                <a href="#" onclick="document.getElementById('logout-form').submit(); return false;">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3 th:text="#{taulerDeControl.cerrarSesion}">Tancar sessió</h3>
+
+                    <form id="logout-form" th:action="@{/logout}" method="post" style="display: none;">
+                        <input type="submit" value="Sign Out" />
+                    </form>
+                </a>
+            </div>
+        </aside>
+        <main>
+            <div class="card" id="card">
+                <div class="profile-container">
+                    <img id="profilePic" th:src="@{/fotoPerfil/{usuari}(usuari=${username})}" class="avatar" />
+                </div>
+
+                <div class="content">
+                    <div class="field-row">
+                        <div class="field">
+                            <h2 th:text="#{addEditUsuari} + ' ' + ${user.username}"></h2>
+                        </div>
+                        <div class="field">
+                            <h2 th:text="#{addEditNom} + ' ' + ${user.empleat.nom}"></h2>
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field">
+                            <h2 th:text="#{addEditCorreu} + ' ' + ${user.empleat.email}" </h2>
+                        </div>
+                        <div class="field">
+                            <h2 th:text="#{addEditTelefon} + ' ' + ${user.empleat.telefon}" </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button id="openModalBtn" class="btn btn-message" th:text="#{cambiarContrasenya}">Cambiar
+                        Contraseña</button>
+                    <button id="openDeleteModalBtn" class="btn btn-follow" th:text="#{eliminarFoto}">Eliminar Foto de
+                        Perfil</button>
+                </div>
+                <div class="buttons2">
+                    <label for="languageSelector" class="language-label" th:text="#{escogerIdioma}">Escoger
+                        idioma:</label>
+                    <select id="languageSelector" class="language-dropdown" onchange="changeLanguage()">
+                        <option value="es" th:selected="${#locale.language == 'es'}">Español</option>
+                        <option value="ca" th:selected="${#locale.language == 'ca'}">Català</option>
+                        <option value="ru" th:selected="${#locale.language == 'ru'}">Russian</option>
+                        <option value="en" th:selected="${#locale.language == 'en'}">English</option>
+                        <option value="fr" th:selected="${#locale.language == 'fr'}">French</option>
+                        <option value="pt" th:selected="${#locale.language == 'pt'}">Portugués</option>
+                    </select>
+                    <a th:href="@{/manual.pdf}" download="Manual_d_Aplicacio.pdf" class="btn download-link">
+                        Descarregar Manual d'aplicació
+                    </a>
+                </div>
+            </div>
+
+            <!-- Analyses -->
+            <!-- End of Recent Orders -->
+            <footer>
+                <div class="creators">
+                    <p th:text="#{creadores}">Creadors de la pàgina:</p>
+                    <p><strong>Aniol Jordán López, Pablo Gonzalez, Ian Jiménez</strong></p>
+                    <p>© 2024 Natura Mobles</p>
+                </div>
+            </footer>
+</body>
+
+<!-- End of Recent Orders -->
+
+</main>
+<div class="right-section">
+    <div class="nav">
+        <div class="dark-mode">
+            <span class="material-icons-sharp active">
+                light_mode
+            </span>
+            <span class="material-icons-sharp">
+                dark_mode
+            </span>
+        </div>
+        <div class="profile-dropdown">
+            <div class="profile" onclick="toggleDropdown()">
+                <div class="info">
+                    <p th:text="#{saludo} + ${nomUsuari}"></p>
+                </div>
+                <div class="profile-photo">
+                    <img th:src="@{/fotoPerfil/{usuari}(usuari=${nomUsuari})}" />
+                </div>
+            </div>
+            <div class="dropdown-menu" id="profile-dropdown-menu">
+                <a href="/perfil" class="dropdown-item" th:text="#{perfil}">Ir a mi perfil</a>
+                <a href="#" onclick="document.getElementById('logout-form').submit(); return false;"
+                    class="dropdown-item">
+                    <h3 th:text="#{perfil.cerrarSesion}">Tancar sessió</h3>
+                </a>
+                <form id="logout-form" th:action="@{/logout}" method="post" style="display: none;">
+                    <input type="submit" value="Sign Out" />
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- End of Nav -->
+
+    <div class="user-profile">
+        <div class="logo">
+            <img src="../static/imatges/logo.png" th:src="@{/imatges/logo.png}">
+            <h2>Natura Mobles</h2>
+            <p th:text="#{definicioEmpresa}">Empresa lider en venta de mobles</p>
+        </div>
+    </div>
+</div>
+<div id="deleteModal" class="modal">
+    <div class="modal-content">
+        <h1 th:text="#{eliminarFoto}">Eliminar Foto de Perfil</h1>
+        <p th:text="#{estasSeguro}">¿Estás seguro de que deseas eliminar la foto de perfil?</p>
+
+        <!-- Formulario de eliminación de foto de perfil -->
+        <form th:action="@{/eliminarFotoPerfil/{username}(username=${username})}" method="post"
+            onsubmit="return confirm('¿Estás seguro de que deseas eliminar la foto de perfil?');">
+            <button type="submit" class="btn btn-follow" th:text="#{eliminarFoto}">Eliminar Foto</button>
+        </form>
+        <button id="closeDeleteModalBtn" class="close-btn" th:text="#{cerrar}">Cerrar</button>
+    </div>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h1 th:text="#{subirFoto}">Pujar Foto De Perfil</h1>
+        <form action="/subirFotoPerfil" method="post" enctype="multipart/form-data">
+            <input type="file" name="fotoPerfil" accept="image/*">
+            <button type="submit" th:text="#{subir}">Pujar</button>
+        </form>
+        <button class="close-btn" id="closeModal" th:text="#{cerrar}">Cerrar</button>
+    </div>
+</div>
+
+<div id="passwordModal" class="modal">
+    <div class="modal-content">
+        <h1 th:text="#{canviContrasenya}">Canvi de Contrasenya</h1>
+        <form th:action="@{/canviarContrasenya}" method="post">
+            <input type="password" id="password" name="password" th:placeholder="#{contrasenya}">
+            <input type="password" id="passwordConfirm" name="passwordConfirm" th:placeholder="#{confirmarContrasenya}">
+            <button type="submit" th:text="#{canviContrasenya}">Canvi de Contrasenya</button>
+        </form>
+        <button id="closeModalBtn" class="close-btn" th:text="#{cerrar}">Cerrar</button>
+    </div>
+</div>
+<script th:src="@{js/cambiarIdioma.js}" src="static/js/cambiarIdioma.js"></script>
+<script th:src="@{js/editprofile.js}" src="static/js/editprofile.js"></script>
+<script th:src="@{js/darkmode.js}" src="static/js/darkmode.js"></script>
+<script th:src="@{js/desplegable.js}" src="static/js/desplegable.js"></script>
+<script th:src="@{/js/popupError.js}" src="../static/js/popupError.js"></script>
+</body>
+
+
+</html>

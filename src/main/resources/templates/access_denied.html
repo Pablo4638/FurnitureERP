@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/styles/error.css}" href="../static/styles/error.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso Denegado</title>
+    <!-- Redirección automática a la página principal después de 3 segundos -->
+    <meta http-equiv="refresh" th:content="'3;url=' + ${pageUrl}" />
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let seconds = 3; // Tiempo inicial en segundos
+            const countdownElement = document.getElementById("countdown");
+
+            const countdown = setInterval(() => {
+                seconds--;
+                countdownElement.textContent = seconds; // Actualiza el contador en pantalla
+                if (seconds <= 0) {
+                    clearInterval(countdown); // Detiene el contador cuando llega a 0
+                }
+            }, 1000); // Actualiza cada segundo
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>No tens permisos per a accedir a aquesta pàgina.</h1>
+        <p>Serás redirigit a la pàgina principal en <span id="countdown">3</span> segons...</p>
+    </div>
+</body>
+
+</html>

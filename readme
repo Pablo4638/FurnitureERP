@@ -1,0 +1,93 @@
+1. Primer de tot, heu d'anar a l'arxiu application.properties i modificar la connexió a la base de dades amb el vostre usuari i contrasenya.
+
+2. Després, obriu l'script SQL datagrup2.sql, executeu les dues primeres línies i després esborreu-les.
+
+3. Executeu el programa amb Java. Una vegada executat, es crearan les taules a la base de dades.
+
+4. Quan s'hagin creat les taules, executeu la resta de l'script SQL per omplir la base de dades amb informació.
+
+5. Per als idiomes, creeu una base de dades a MongoDB amb el nom NaturaMongo.
+
+6. Creeu una col·lecció amb el nom messages i, dins d'aquesta col·lecció, afegiu tots els arxius amb format messages_idioma.json que es troben a la carpeta principal.
+
+7. Creeu una altra col·lecció anomenada NaturaMongo. Aquesta serà per a les fotos de perfil; no cal fer res més.
+
+8. Reinicieu el programa.
+
+9. Els usuaris creats són:
+
+    admin:1234
+    rrhh:1234
+    finances:1234
+    user:1234
+    inventari:1234
+
+(El format és usuari:contrasenya).
+
+
+
+----------------------------------------------------
+
+English
+
+    First, go to the application.properties file and modify the database connection with your username and password.
+
+    Then, open the SQL script datagrup2.sql, execute the first two lines, and then delete them.
+
+    Run the program with Java. Once executed, the tables will be created in the database.
+
+    After the tables have been created, execute the rest of the SQL script to populate the database with information.
+
+    For languages, create a database in MongoDB named NaturaMongo.
+
+    Create a collection named messages, and inside this collection, add all the messages_language.json files found in the main folder.
+
+    Create another collection named NaturaMongo. This will be for profile photos; no further action is needed.
+
+    Restart the program.
+
+    The created users are:
+
+    admin:1234  
+    rrhh:1234  
+    finances:1234  
+    user:1234  
+    inventari:1234  
+
+(The format is username:password).
+
+
+
+
+----------------------------------------------------
+
+Español
+
+    Primero, ve al archivo application.properties y modifica la conexión a la base de datos con tu usuario y contraseña.
+
+    Luego, abre el script SQL datagrup2.sql, ejecuta las dos primeras líneas y luego elimínalas.
+
+    Ejecuta el programa con Java. Una vez ejecutado, se crearán las tablas en la base de datos.
+
+    Cuando las tablas hayan sido creadas, ejecuta el resto del script SQL para llenar la base de datos con información.
+
+    Para los idiomas, crea una base de datos en MongoDB con el nombre NaturaMongo.
+
+    Crea una colección con el nombre messages y, dentro de esta colección, agrega todos los archivos con formato messages_idioma.json que se encuentran en la carpeta principal.
+
+    Crea otra colección llamada NaturaMongo. Esta será para las fotos de perfil; no es necesario hacer nada más.
+
+    Reinicia el programa.
+
+    Los usuarios creados son:
+
+    admin:1234  
+    rrhh:1234  
+    finances:1234  
+    user:1234  
+    inventari:1234  
+
+(El formato es usuario:contraseña).
+
+
+

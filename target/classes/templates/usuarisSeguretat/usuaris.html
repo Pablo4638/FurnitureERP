@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/styles/style.css" th:href="@{/styles/style.css}">
+    <link rel="stylesheet" href="../../static/styles/modal.css" th:href="@{/styles/modal.css}">
+    <link rel="stylesheet" th:href="@{/styles/popupError.css}" href="../static/styles/popupError.css">
+    <title>Usuaris | Natura Mobles</title>
+    <link rel="icon" th:href="@{/imatges/logo.png}" type="image/png" sizes="32x32" S
+        media="(prefers-color-scheme: light)">
+    <link rel="icon" th:href="@{/imatges/logo1.png}" type="image/png" sizes="32x32"
+        media="(prefers-color-scheme: dark)">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <a href="/taulerDeControl">
+                    <div class="logo">
+                        <img alt="Imatge amb el logo de la empresa" src="../../static/imatges/logo.png"
+                            th:src="@{/imatges/logo.png}">
+                        <h2>Natura<span class="success">Mobles</span></h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">
+                            close
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="sidebar">
+                <a href="/usuaris" class="active">
+                    <span class="material-icons-sharp">
+                        person
+                    </span>
+                    <h3 th:text="#{usuaris}">Usuaris</h3>
+                </a>
+                <a href="#" id="add-btn">
+                    <span class="material-icons-sharp">
+                        person_add
+                    </span>
+                    <h3 th:text="#{afegirUsuari}">Afegir Usuari</h3>
+                </a>
+
+                <a href="#" onclick="document.getElementById('logout-form').submit(); return false;">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3 th:text="#{usuari.cerrarSesion}">Tancar sessió</h3>
+
+                    <form id="logout-form" th:action="@{/logout}" method="post" style="display: none;">
+                        <input type="submit" value="Sign Out" />
+                    </form>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <div class="recent-orders">
+                <h2 th:text="#{usuarisIseguretat}">Usuaris i Seguretat</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col" th:text="#{nomEmpleat}">Nom Empleat</th>
+                            <th scope="col" th:text="#{usuari}">Usuari</th>
+                            <th scope="col" th:text="#{rol}">Rol</th>
+                            <th class="th-alinear" scope="col" th:text="#{accions}">Accions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="user : ${users}">
+                            <td th:text="${user.empleat != null ? user.empleat.nom : 'Sense empleat'}"></td>
+                            <td th:text="${user.username}"></td>
+                            <td th:text="${user.role}"></td>
+                            <td class="td-alinear">
+                                <a th:href="@{/usuaris/contraseña/{id}(id=${user.id})}"
+                                    onclick="return confirm('¿Estás segur que desitjas restaurar la contraseña del usuari?');">
+                                    <span class="material-icons-sharp">
+                                        key
+                                    </span>
+                                </a>
+                                <a href="#" class="edit-btn" th:attr="data-user-id=${user.id}">
+                                    <span class="material-icons-sharp">
+                                        edit
+                                    </span>
+                                </a>
+                                <a th:href="@{/usuaris/eliminar/{id}(id=${user.id})}"
+                                    onclick="return confirm('¿Estás segur que desitjas eliminar aquest usuari?');">
+                                    <span class=" material-icons-sharp">
+                                        delete
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <!-- End of Main Content -->
+        <div class="right-section">
+            <div class="nav">
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+                <div class="profile-dropdown">
+                    <div class="profile" onclick="toggleDropdown()">
+                        <div class="info">
+                            <p th:text="#{saludo} + ${nomUsuari}"></p>
+                        </div>
+                        <div class="profile-photo">
+                            <img th:src="@{/fotoPerfil/{usuari}(usuari=${nomUsuari})}" />
+                        </div>
+                    </div>
+                    <div class="dropdown-menu" id="profile-dropdown-menu">
+                        <a href="/perfil" class="dropdown-item" th:text="#{perfil}">Ir a mi perfil</a>
+                        <a href="#" onclick="document.getElementById('logout-form').submit(); return false;"
+                            class="dropdown-item">
+                            <h3 th:text="#{perfil.cerrarSesion}">Tancar sessió</h3>
+                        </a>
+                        <form id="logout-form" th:action="@{/logout}" method="post" style="display: none;">
+                            <input type="submit" value="Sign Out" />
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <a href="/taulerDeControl">
+                    <div class="logo">
+                        <img src="../../static/imatges/logo.png" th:src="@{/imatges/logo.png}">
+                        <h2>Natura Mobles</h2>
+                        <p th:text="#{definicioEmpresa}"></p>
+                    </div>
+                </a>
+            </div>
+            <!-- Modal Form to Add Provider -->
+            <div id="add-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="close-modal-btn">&times;</span>
+                    <h3 th:text="#{afegirUsuari}">Afegir Usuari</h3>
+                    <form action="/usuaris/nou" method="post">
+
+                        <label for="username" th:text="#{addEditUsuari}">Usuari:</label>
+                        <input type="text" id="username" name="username" required><br><br>
+
+                        <label for="empleat" th:text="#{addEditEmpleat}">Empleat:</label>
+                        <select id="empleat" name="empleat" required>
+                            <option value="" disabled selected th:text="#{seleccionar}">Seleccionar...</option>
+                            <option th:each="empleat : ${empleats}" th:value="${empleat.id_empleat}"
+                                th:text="${empleat.nom}">
+                            </option>
+                        </select>
+                        <br><br>
+
+                        <label for="role" th:text="#{addEditRol}">Rol:</label>
+                        <select id="role" name="role" required>
+                            <option value="" disable selected th:text="#{seleccionar}">Seleccionar...</option>
+                            <option th:each="role : ${tipusRol}" th:value="${role}" th:text="${role}"></option>
+                        </select><br><br>
+
+                        <button type="submit" th:text="#{crear}">Afegir</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Modal de Editar Usuari -->
+            <div id="edit-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="close-edit-modal-btn">&times;</span>
+                    <h2 th:text="#{editarUsuari}">Editar Usuari</h2>
+                    <form id="edit-form" method="post">
+                        <div>
+                            <label for="username" th:text="#{addEditUsuari}">Usuari:</label>
+                            <input type="text" id="username" name="username" required><br><br>
+
+                            <label for="role" th:text="#{addEditRol}">Role:</label>
+                            <input type="text" id="role" name="role" required><br><br>
+                            <button type="submit" th:text="#{update}">Actualizar</button>
+                        </div>
+                    </form>
+                </div>
+                </form>
+            </div>
+        </div>
+        <script th:src="@{js/modaledit/modalEditUsuari.js}"></script>
+        <script th:src="@{js/modaladd.js}" src="static/js/modaladd.js"></script>
+        <script th:src="@{js/desplegable.js}" src="static/js/desplegable.js"></script>
+        <script th:src="@{js/darkmode.js}" src="static/js/darkmode.js"></script>
+        <script th:src="@{/js/popupError.js}" src="../static/js/popupError.js"></script>
+
+        <div class="popup" id="popup" th:classappend="${successMessage != null || errorMessage != null} ? 'show' : ''"
+            th:styleappend="${successMessage != null} ? 'background-color: #4caf50;' : ''">
+            <p th:if="${successMessage}" th:text="${successMessage}"></p>
+            <p th:if="${errorMessage}" th:text="${errorMessage}"></p>
+            <div class="progress-bar"></div>
+        </div>
+</body>
+
+</html>

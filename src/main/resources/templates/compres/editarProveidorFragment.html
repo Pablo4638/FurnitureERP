@@ -1,0 +1,21 @@
+<div class="modal-content">
+    <span class="close" id="close-edit-modal-btn">&times;</span>
+    <h2 th:text="#{editarProveidor}">Editar Proveïdor</h2>
+    <form th:action="@{/proveidors/editar/{id}(id=${proveidor.id_proveidor})}" method="post">
+        <div>
+            <label for="nom" th:text="#{addEditNom}">Nom:</label>
+            <input type="text" id="nom" name="nom" th:value="${proveidor.nom}" required><br><br>
+
+            <label for="email" th:text="#{addEditEmail}">E-mail:</label>
+            <input type="text" id="email" name="email" th:value="${proveidor.email}" required><br><br>
+
+            <label for="telefon"  th:text="#{addEditTelefon}">Telèfon:</label>
+            <input type="text" id="telefon" name="telefon" th:value="${proveidor.telefon}" required><br><br>
+
+            <label for="direccio" th:text="#{addEditDireccio}">Direcció:</label>
+            <input type="text" id="direccio" name="direccio" th:value="${proveidor.direccio}" required><br><br>
+
+            <button type="submit" th:text="#{update}">Actualizar</button>
+        </div>
+    </form>
+</div>

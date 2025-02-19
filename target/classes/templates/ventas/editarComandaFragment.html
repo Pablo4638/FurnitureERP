@@ -1,0 +1,16 @@
+<!-- ventas/editarComandaFragment.html -->
+<div class="modal-content">
+    <span class="close" id="close-edit-modal-btn">&times;</span>
+    <h2 th:text="#{editarComanda}">Editar Comanda</h2>
+    <form th:action="@{/comandes/editar/{id}(id=${comanda.id_comanda})}" method="post" >
+        <div>
+            <label for="estat" th:text="#{estat}">Estat:</label>
+            <select id="estat" name="estat">
+                <option th:each="estat : ${estats}" th:value="${estat}" th:text="${estat}"
+                    th:selected="${estat == comanda.estat}"></option>
+            </select><br><br>
+
+            <button type="submit" th:text="#{update}">Actualitzar</button>
+        </div>
+    </form>
+</div>

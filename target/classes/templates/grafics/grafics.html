@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/style.css" th:href="@{/styles/style.css}">
+    <title>Grafics | Natura Mobles</title>
+    <link rel="icon" th:href="@{/imatges/logo.png}" type="image/png" sizes="32x32" S
+        media="(prefers-color-scheme: light)">
+    <link rel="icon" th:href="@{/imatges/logo1.png}" type="image/png" sizes="32x32"
+        media="(prefers-color-scheme: dark)">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .chart-container {
+            width: 47%;
+            height: 375px;
+            /* Puedes ajustar la altura según tus necesidades */
+            margin: 15px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .chart-container canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .charts-wrapper {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Incluye tu Sidebar aquí -->
+        <aside>
+            <div class="toggle">
+                <a href="/taulerDeControl">
+                    <div class="logo">
+                        <img alt="Imatge amb el logo de la empresa" src="../static/imatges/logo.png"
+                            th:src="@{/imatges/logo.png}">
+                        <h2>Natura<span class="success">Mobles</span></h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">close</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="sidebar">
+                <a href="/taulerDeControl">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3 th:text="#{taulerDeControl.title}">Tauler de control</h3>
+                </a>
+                <a href="/proveidors">
+                    <span class="material-icons-sharp">storefront</span>
+                    <h3 th:text="#{taulerDeControl.compres}">Compres</h3>
+                </a>
+                <a href="/clients">
+                    <span class="material-icons-sharp">shopping_cart</span>
+                    <h3 th:text="#{taulerDeControl.ventas}">Ventas</h3>
+                </a>
+                <a href="/finances">
+                    <span class="material-icons-sharp">paid</span>
+                    <h3 th:text="#{taulerDeControl.finances}">Finances</h3>
+                </a>
+                <a href="/productes">
+                    <span class="material-icons-sharp">inventory</span>
+                    <h3 th:text="#{taulerDeControl.inventari}">Inventari</h3>
+                </a>
+                <a href="/empleats">
+                    <span class="material-icons-sharp">diversity_3</span>
+                    <h3>RRHH</h3>
+                    <span class="message-count">27</span>
+                </a>
+                <a href="/grafics" class="active">
+                    <span class="material-icons-sharp">equalizer</span>
+                    <h3 th:text="#{grafics}">Grafics</h3>
+                </a>
+                <a href="/usuaris">
+                    <span class="material-icons-sharp">person</span>
+                    <h3 th:text="#{taulerDeControl.usuari}">Usuaris</h3>
+                </a>
+                <a href="/perfil">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3 th:text="#{taulerDeControl.configuracio}">Configuracio</h3>
+                </a>
+                <div class="logout-section">
+                    <a href="#" onclick="document.getElementById('logout-form').submit(); return false;">
+                        <span class="material-icons-sharp">logout</span>
+                        <h3 th:text="#{cerrarSesion}"></h3>
+                    </a>
+                    <form id="logout-form" th:action="@{/logout}" method="post" style="display: none;">
+                        <input type="submit" value="Sign Out" />
+                    </form>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <div class="charts-wrapper">
+                <div class="chart-container">
+                    <h2 th:text="#{ventasMensuales}">Ventas Mensuales</h2>
+                    <canvas id="salesChartMensual"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h2 th:text="#{VentasAnuales}">Ventas Anuales</h2>
+                    <canvas id="salesChartAnual"></canvas>
+                </div>
+            </div>
+            <div class="charts-wrapper">
+                <div class="chart-container">
+                    <h2 th:text="#{ordresCompra}">Ordres Compra</h2>
+                    <canvas id="ordresChartAnual"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h2 th:text="#{ventasSemanales}">Ventas Semanales</h2>
+                    <canvas id="salesChartSemanal"></canvas>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+
+                <div class="profile-dropdown">
+                    <div class="profile" onclick="toggleDropdown()">
+                        <div class="info">
+                            <p th:text="#{saludo} + ${nomUsuari}"></p>
+                        </div>
+                        <div class="profile-photo">
+                            <img th:src="@{/fotoPerfil/{usuari}(usuari=${nomUsuari})}" />
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu" id="profile-dropdown-menu">
+                        <a href="/perfil" class="dropdown-item">Ir a mi perfil</a>
+                        <a href="#" onclick="document.getElementById('logout-form').submit(); return false;"
+                            class="dropdown-item">
+                            <h3 th:text="#{perfil.cerrarSesion}">Tancar sessió</h3>
+                        </a>
+                        <form id="logout-form" th:action="@{/logout}" method="post" style="display: none;">
+                            <input type="submit" value="Sign Out" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="../static/imatges/logo.png" th:src="@{/imatges/logo.png}">
+                    <h2>Natura Mobles</h2>
+                    <p th:text="#{definicioEmpresa}"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cargar archivos JavaScript -->
+        <script th:src="@{js/sales-anuales.js}" src="static/js/sales-anuales.js"></script>
+        <script th:src="@{js/ordres-anuales.js}" src="static/js/ordres-anuales.js"></script>
+        <script th:src="@{js/sales-mensuales.js}" src="static/js/sales-mensuales.js"></script>
+        <script th:src="@{js/sales-semanales.js}" src="static/js/sales-semanales.js"></script>
+        <script th:src="@{/js/darkmode.js}" src="static/js/darkmode.js"></script>
+        <script th:src="@{js/desplegable.js}" src="static/js/desplegable.js"></script>
+    </div>
+</body>
+
+</html>

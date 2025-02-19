@@ -1,0 +1,283 @@
+main {
+  flex: 1;
+  /* Hace que el contenido principal ocupe todo el espacio disponible */
+  display: flex;
+  flex-direction: column;
+  /* Organiza los elementos del main en columna */
+  padding: 20px;
+  /* Espacio interno para el contenido */
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 1cm;
+  margin-right: 4cm;
+  border-radius: 16px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s;
+  background-image: url("../imatges/background.jpg");
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.content h2,
+.content p {
+  margin: 10px 0;
+  text-align: center;
+  color: #222;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.buttons2 {
+
+  gap: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+
+}
+
+.btn {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-message {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.btn-follow {
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Contenedor de la imagen de perfil */
+.profile-container {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Imagen de perfil */
+.profile-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Animación al pasar el ratón */
+.profile-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos del modal */
+.modal {
+  display: none;
+  /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-image: url("../imatges/background.jpg");
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s;
+}
+
+.modal-content h1 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.modal-content input[type="file"] {
+  margin-bottom: 15px;
+}
+
+/* Botón para cerrar el modal */
+.close-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #ff3333;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Estilos para organizar los campos en dos columnas horizontales */
+.content {
+  display: flex;
+  flex-direction: column;
+  /* Organiza los divs verticalmente */
+  gap: 20px;
+  /* Espacio entre las filas */
+}
+
+/* Estilos para las filas */
+.field-row {
+  display: flex;
+  /* Esto hace que los elementos dentro de cada fila se alineen horizontalmente */
+  justify-content: space-between;
+  /* Espacia los elementos uniformemente */
+}
+
+/* Estilos para cada campo (h2) */
+.field h2 {
+  margin-left: 2cm;
+  /* Elimina márgenes por defecto */
+  font-size: 1.2rem;
+  cursor: pointer;
+  /* Cambia el cursor al pasar por encima para indicar que es editable */
+}
+
+
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 190px;
+}
+
+.download-link {
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.8);
+  margin-left: 90px;
+}
+
+.download-link:hover {
+  transform: scale(1.05);
+  background-color: #d3f1d2;
+}
+
+.download-link:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.download-link:active {
+  background-color: #004085;
+  border-color: #004085;
+}
+
+#languageSelector {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  cursor: pointer;
+ 
+}
+
+#languageSelector:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.language-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #000000;
+
+}
+
+/* Etiqueta del selector */
+.language-label {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  margin-right: 15px;
+}
+
+/* Estilo del selector */
+.language-dropdown {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+
+/* Efecto hover y foco */
+.language-dropdown:hover {
+  border-color: #007BFF;
+}
+
+.language-dropdown:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  
+}

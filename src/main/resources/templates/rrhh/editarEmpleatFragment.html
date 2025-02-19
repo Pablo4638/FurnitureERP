@@ -1,0 +1,31 @@
+<div class="modal-content">
+    <span class="close" id="close-edit-modal-btn">&times;</span>
+    <h2 th:text="#{editarEmpleat}">Modificar Empleats</h2>
+    <form th:action="@{/empleats/editar/{id}(id=${empleat.id_empleat})}" th:object="${empleat}" method="post">
+        <div>
+            <label for="nom" th:text="#{addEditNom}">Nom:</label>
+            <input type="text" id="nom" th:field="*{nom}" required>
+
+            <label for="salari" th:text="#{addEditSalari}">Salari:</label>
+            <input type="number" step="0.01" id="salari" th:field="*{salari}"></input><br>
+
+            <label for="data_contractacio">Data de Contractació:</label>
+            <input type="date" id="data_contractacio" th:field="*{data_contractacio}"><br><br>
+
+            <label for="email" th:text="#{addEditEmail}">Email:</label>
+            <input id="email" th:field="*{email}"></input>
+
+            <label for="telefon" th:text="#{addEditTelefon}">Telefon:</label>
+            <input type="number" id="telefon" th:field="*{telefon}"></input>
+
+            <label for="departament" th:text="#{addEditDepartament}">Departament: </label>
+            <select id="departament" th:field="*{departament}" required>
+                <option value="" disabled selected>Seleccionar...</option>
+                <option th:each="departament : ${departaments}" th:value="${departament}" th:text="${departament}">
+                </option>
+            </select>
+
+            <button type="submit" th:text="#{update}">Actualizar</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+<div class="modal-content">
+    <span class="close" id="close-edit-modal-btn">&times;</span>
+    <h2 th:text="#{editarProducte}">Editar Producte</h2>
+    <form th:action="@{/productes/editar/{id}(id=${producte.id_producte})}" method="post">
+        <div>
+            <label for="nom_producte" th:text="#{addEditNom}">Nom del Producte:</label>
+            <input type="text" id="nom_producte" th:field="*{producte.nom_producte}" required>
+        </div>
+        <div>
+            <label for="descripcio" th:text="#{addEditDescripcio}">Descripcio:</label>
+            <input type="text" id="descripcio" th:field="*{producte.descripcio}" required>
+        </div>
+        <div>
+            <label for="preu" th:text="#{addEditPreu}">Preu:</label>
+            <input type="number" step="0.01" id="preu" th:field="*{producte.preu}" required>
+        </div>
+        <div>
+            <label for="stcok_actual" th:text="#{addEditStockActual}">Stock Actual:</label>
+            <input type="number" step="1" id="stcok_actual" th:field="*{producte.stcok_actual}" required>
+        </div>
+        <div>
+            <label for="unitat_mesura" th:text="#{addEditUnitatMesura}">Unitat de Mesura:</label>
+            <input type="text" id="unitat_mesura" th:field="*{producte.unitat_mesura}" required>
+
+        </div>
+        <button type="submit" th:text="#{update}">Actualitzar</button>
+    </form>
+</div>

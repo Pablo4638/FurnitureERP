@@ -1,0 +1,862 @@
+[
+  {
+    "message_key": "accions",
+    "locale": "ru",
+    "message": "Действия"
+  },
+  {
+    "message_key": "addEditDireccio",
+    "locale": "ru",
+    "message": "Адрес:"
+  },
+  {
+    "message_key": "addEditEmail",
+    "locale": "ru",
+    "message": "Эл. почта:"
+  },
+  {
+    "message_key": "addEditNom",
+    "locale": "ru",
+    "message": "Имя:"
+  },
+  {
+    "message_key": "addEditTelefon",
+    "locale": "ru",
+    "message": "Телефон:"
+  },
+  {
+    "message_key": "afegir",
+    "locale": "ru",
+    "message": "Добавить"
+  },
+  {
+    "message_key": "afegirClient",
+    "locale": "ru",
+    "message": "Добавить клиента"
+  },
+  {
+    "message_key": "afegirComanda",
+    "locale": "ru",
+    "message": "Добавить заказ"
+  },
+  {
+    "message_key": "afegirOrdre",
+    "locale": "ru",
+    "message": "Добавить заказ на покупку"
+  },
+  {
+    "message_key": "afegirProveidor",
+    "locale": "ru",
+    "message": "Добавить поставщика"
+  },
+  {
+    "message_key": "altaClient",
+    "locale": "ru",
+    "message": "Зарегистрировать клиента"
+  },
+  {
+    "message_key": "altaComanda",
+    "locale": "ru",
+    "message": "Зарегистрировать заказ"
+  },
+  {
+    "message_key": "cerrarSesion",
+    "locale": "ru",
+    "message": "Выйти"
+  },
+  {
+    "message_key": "client",
+    "locale": "ru",
+    "message": "Клиент"
+  },
+  {
+    "message_key": "client:",
+    "locale": "ru",
+    "message": "Клиент: "
+  },
+  {
+    "message_key": "clientVIP",
+    "locale": "ru",
+    "message": "VIP клиент"
+  },
+  {
+    "message_key": "clients",
+    "locale": "ru",
+    "message": "Клиенты"
+  },
+  {
+    "message_key": "comandes",
+    "locale": "ru",
+    "message": "Заказы"
+  },
+  {
+    "message_key": "compres.cerrarSesion",
+    "locale": "ru",
+    "message": "Выйти"
+  },
+  {
+    "message_key": "crear",
+    "locale": "ru",
+    "message": "Создать"
+  },
+  {
+    "message_key": "crearComanda",
+    "locale": "ru",
+    "message": "Создать заказ"
+  },
+  {
+    "message_key": "dataComanda",
+    "locale": "ru",
+    "message": "Дата заказа"
+  },
+  {
+    "message_key": "dataOrdre",
+    "locale": "ru",
+    "message": "Дата заказа"
+  },
+  {
+    "message_key": "definicioEmpresa",
+    "locale": "ru",
+    "message": "Ведущая компания по продаже мебели"
+  },
+  {
+    "message_key": "descripcio",
+    "locale": "ru",
+    "message": "Описание"
+  },
+  {
+    "message_key": "detallsDeLaComanda",
+    "locale": "ru",
+    "message": "Детали заказа"
+  },
+  {
+    "message_key": "direccio",
+    "locale": "ru",
+    "message": "Адрес"
+  },
+  {
+    "message_key": "editarClient",
+    "locale": "ru",
+    "message": "Редактировать клиента"
+  },
+  {
+    "message_key": "editarComanda",
+    "locale": "ru",
+    "message": "Редактировать заказ"
+  },
+  {
+    "message_key": "editarOrdre",
+    "locale": "ru",
+    "message": "Редактировать заказ"
+  },
+  {
+    "message_key": "editarProveidor",
+    "locale": "ru",
+    "message": "Редактировать поставщика"
+  },
+  {
+    "message_key": "email",
+    "locale": "ru",
+    "message": "Эл. почта"
+  },
+  {
+    "message_key": "empleatsTotals",
+    "locale": "ru",
+    "message": "Всего сотрудников"
+  },
+  {
+    "message_key": "estat",
+    "locale": "ru",
+    "message": "Статус"
+  },
+  {
+    "message_key": "historialComanda",
+    "locale": "ru",
+    "message": "История заказов"
+  },
+  {
+    "message_key": "historialOrdres",
+    "locale": "ru",
+    "message": "История заказов на покупку"
+  },
+  {
+    "message_key": "idComanda",
+    "locale": "ru",
+    "message": "ID заказа"
+  },
+  {
+    "message_key": "idOrdre",
+    "locale": "ru",
+    "message": "ID заказа"
+  },
+  {
+    "message_key": "llistatClient",
+    "locale": "ru",
+    "message": "Список клиентов"
+  },
+  {
+    "message_key": "llistatComanda",
+    "locale": "ru",
+    "message": "Список заказов"
+  },
+  {
+    "message_key": "llistatOrdres",
+    "locale": "ru",
+    "message": "Список заказов на покупку"
+  },
+  {
+    "message_key": "llistatProveidor",
+    "locale": "ru",
+    "message": "Список поставщиков"
+  },
+  {
+    "message_key": "mostrarTots",
+    "locale": "ru",
+    "message": "Показать все"
+  },
+  {
+    "message_key": "nom",
+    "locale": "ru",
+    "message": "Имя"
+  },
+  {
+    "message_key": "ordeCompraRecent",
+    "locale": "ru",
+    "message": "Недавние заказы на покупку"
+  },
+  {
+    "message_key": "ordresDeCompra",
+    "locale": "ru",
+    "message": "Заказы на покупку"
+  },
+  {
+    "message_key": "perfil",
+    "locale": "ru",
+    "message": "Профиль"
+  },
+  {
+    "message_key": "perfil.cerrarSesion",
+    "locale": "ru",
+    "message": "Выйти"
+  },
+  {
+    "message_key": "preu",
+    "locale": "ru",
+    "message": "Цена"
+  },
+  {
+    "message_key": "precioProducte",
+    "locale": "ru",
+    "message": "Цена продукта"
+  },
+  {
+    "message_key": "producte",
+    "locale": "ru",
+    "message": "Продукт"
+  },
+  {
+    "message_key": "productesDe",
+    "locale": "ru",
+    "message": "Продукты от "
+  },
+  {
+    "message_key": "proveidor",
+    "locale": "ru",
+    "message": "Поставщик"
+  },
+  {
+    "message_key": "proveidors",
+    "locale": "ru",
+    "message": "Поставщики"
+  },
+  {
+    "message_key": "quantitat",
+    "locale": "ru",
+    "message": "Количество"
+  },
+  {
+    "message_key": "recordatori",
+    "locale": "ru",
+    "message": "Напоминание"
+  },
+  {
+    "message_key": "saludo",
+    "locale": "ru",
+    "message": "Привет, "
+  },
+  {
+    "message_key": "seleccionarProveidor",
+    "locale": "ru",
+    "message": "Выбрать поставщика"
+  },
+  {
+    "message_key": "subtotal",
+    "locale": "ru",
+    "message": "Промежуточный итог"
+  },
+  {
+    "message_key": "taulerDeControl.cerrarSesion",
+    "locale": "ru",
+    "message": "Выйти"
+  },
+  {
+    "message_key": "taulerDeControl.compres",
+    "locale": "ru",
+    "message": "Покупки"
+  },
+  {
+    "message_key": "taulerDeControl.configuracio",
+    "locale": "ru",
+    "message": "Настройки"
+  },
+  {
+    "message_key": "taulerDeControl.finances",
+    "locale": "ru",
+    "message": "Финансы"
+  },
+  {
+    "message_key": "taulerDeControl.inventari",
+    "locale": "ru",
+    "message": "Инвентарь"
+  },
+  {
+    "message_key": "taulerDeControl.title",
+    "locale": "ru",
+    "message": "Панель управления"
+  },
+  {
+    "message_key": "taulerDeControl.usuari",
+    "locale": "ru",
+    "message": "Пользователи"
+  },
+  {
+    "message_key": "taulerDeControl.ventas",
+    "locale": "ru",
+    "message": "Продажи"
+  },
+  {
+    "message_key": "telefon",
+    "locale": "ru",
+    "message": "Телефон"
+  },
+  {
+    "message_key": "tipus",
+    "locale": "ru",
+    "message": "Тип"
+  },
+  {
+    "message_key": "tipusClient",
+    "locale": "ru",
+    "message": "Тип клиента: "
+  },
+  {
+    "message_key": "total",
+    "locale": "ru",
+    "message": "Итого"
+  },
+  {
+    "message_key": "update",
+    "locale": "ru",
+    "message": "Обновить"
+  },
+  {
+    "message_key": "ventas.cerrarSesion",
+    "locale": "ru",
+    "message": "Выйти"
+  },
+  {
+    "message_key": "ventasDiarias",
+    "locale": "ru",
+    "message": "Ежедневные продажи"
+  },
+  {
+    "message_key": "llistatProductes",
+    "locale": "ru",
+    "message": "Список продуктов"
+  },
+  {
+    "message_key": "afegirProducte",
+    "locale": "ru",
+    "message": "Добавить продукт"
+  },
+  {
+    "message_key": "llistatCategories",
+    "locale": "ru",
+    "message": "Список категорий"
+  },
+  {
+    "message_key": "entrades",
+    "locale": "ru",
+    "message": "Входы"
+  },
+  {
+    "message_key": "sortides",
+    "locale": "ru",
+    "message": "Выходы"
+  },
+  {
+    "message_key": "historialMoviments",
+    "locale": "ru",
+    "message": "История движений"
+  },
+  {
+    "message_key": "inventari.cerrarSesion",
+    "locale": "ru",
+    "message": "Выйти"
+  },
+  {
+    "message_key": "productes",
+    "locale": "ru",
+    "message": "Продукты"
+  },
+  {
+    "message_key": "nomProducte",
+    "locale": "ru",
+    "message": "Название продукта"
+  },
+  {
+    "message_key": "categoria",
+    "locale": "ru",
+    "message": "Категория"
+  },
+  {
+    "message_key": "stockActual",
+    "locale": "ru",
+    "message": "Текущий запас"
+  },
+  {
+    "message_key": "unitatDeMesura",
+    "locale": "ru",
+    "message": "Единица измерения"
+  },
+  {
+    "message_key": "addEditDescripcio",
+    "locale": "ru",
+    "message": "Описание:"
+  },
+  {
+    "message_key": "addEditCategoria",
+    "locale": "ru",
+    "message": "Категория:"
+  },
+  {
+    "message_key": "seleccionar",
+    "locale": "ru",
+    "message": "Выбрать..."
+  },
+  {
+    "message_key": "addEditProveidor",
+    "locale": "ru",
+    "message": "Поставщик:"
+  },
+  {
+    "message_key": "addEditPreu",
+    "locale": "ru",
+    "message": "Цена:"
+  },
+  {
+    "message_key": "addEditStockActual",
+    "locale": "ru",
+    "message": "Текущий запас:"
+  },
+  {
+    "message_key": "afegirCategoria",
+    "locale": "ru",
+    "message": "Добавить категорию"
+  },
+  {
+    "message_key": "categories",
+    "locale": "ru",
+    "message": "Категории"
+  },
+  {
+    "message_key": "nomCategoria",
+    "locale": "ru",
+    "message": "Название категории"
+  },
+  {
+    "message_key": "addEditNomCategoria",
+    "locale": "ru",
+    "message": "Название категории:"
+  },
+  {
+    "message_key": "addEditUnitatMesura",
+    "locale": "ru",
+    "message": "Единица измерения:"
+  },
+  {
+    "message_key": "editarProducte",
+    "locale": "ru",
+    "message": "Редактировать продукт"
+  },
+  {
+    "message_key": "dataMoviment",
+    "locale": "ru",
+    "message": "Дата движения"
+  },
+  {
+    "message_key": "tipusMoviment",
+    "locale": "ru",
+    "message": "Тип движения"
+  },
+  {
+    "message_key": "usuaris",
+    "locale": "ru",
+    "message": "Пользователи"
+  },
+  {
+    "message_key": "afegirUsuari",
+    "locale": "ru",
+    "message": "Добавить пользователя"
+  },
+  {
+    "message_key": "usuari.cerrarSesion",
+    "locale": "ru",
+    "message": "Выйти"
+  },
+  {
+    "message_key": "usuarisIseguretat",
+    "locale": "ru",
+    "message": "Пользователи и безопасность"
+  },
+  {
+    "message_key": "nomEmpleat",
+    "locale": "ru",
+    "message": "Имя сотрудника"
+  },
+  {
+    "message_key": "usuari",
+    "locale": "ru",
+    "message": "Пользователь"
+  },
+  {
+    "message_key": "rol",
+    "locale": "ru",
+    "message": "Роль"
+  },
+  {
+    "message_key": "addEditUsuari",
+    "locale": "ru",
+    "message": "Пользователь:"
+  },
+  {
+    "message_key": "addEditEmpleat",
+    "locale": "ru",
+    "message": "Сотрудник:"
+  },
+  {
+    "message_key": "addEditRol",
+    "locale": "ru",
+    "message": "Роль:"
+  },
+  {
+    "message_key": "editarUsuari",
+    "locale": "ru",
+    "message": "Редактировать пользователя"
+  },
+  {
+    "message_key": "escogerIdioma",
+    "locale": "ru",
+    "message": "Выбрать язык"
+  },
+  {
+    "message_key": "addEditCorreu",
+    "locale": "ru",
+    "message": "Эл. почта:"
+  },
+  {
+    "message_key": "cambiarContrasenya",
+    "locale": "ru",
+    "message": "Изменить пароль"
+  },
+  {
+    "message_key": "eliminarFoto",
+    "locale": "ru",
+    "message": "Удалить фото профиля"
+  },
+  {
+    "message_key": "estasSeguro",
+    "locale": "ru",
+    "message": "Вы уверены, что хотите удалить фото профиля?"
+  },
+  {
+    "message_key": "cerrar",
+    "locale": "ru",
+    "message": "Закрыть"
+  },
+  {
+    "message_key": "canviContrasenya",
+    "locale": "ru",
+    "message": "Смена пароля"
+  },
+  {
+    "message_key": "contrasenya",
+    "locale": "ru",
+    "message": "Пароль"
+  },
+  {
+    "message_key": "confirmarContrasenya",
+    "locale": "ru",
+    "message": "Подтвердить пароль"
+  },
+  {
+    "message_key": "guardar",
+    "locale": "ru",
+    "message": "Сохранить"
+  },
+  {
+    "message_key": "subir",
+    "locale": "ru",
+    "message": "Загрузить"
+  },
+  {
+    "message_key": "subirFoto",
+    "locale": "ru",
+    "message": "Загрузить фото профиля"
+  },
+  {
+    "message_key": "llistatEmpleats",
+    "locale": "ru",
+    "message": "Список сотрудников"
+  },
+  {
+    "message_key": "afegirEmpleat",
+    "locale": "ru",
+    "message": "Добавить сотрудника"
+  },
+  {
+    "message_key": "registreAssistencia",
+    "locale": "ru",
+    "message": "Журнал посещаемости"
+  },
+  {
+    "message_key": "historialAssistencia",
+    "locale": "ru",
+    "message": "История посещаемости"
+  },
+  {
+    "message_key": "llistatNomines",
+    "locale": "ru",
+    "message": "Список зарплат"
+  },
+  {
+    "message_key": "generarNomina",
+    "locale": "ru",
+    "message": "Создать зарплату"
+  },
+  {
+    "message_key": "rrhh.cerrarSesion",
+    "locale": "ru",
+    "message": "Выйти"
+  },
+  {
+    "message_key": "empleats",
+    "locale": "ru",
+    "message": "Сотрудники"
+  },
+  {
+    "message_key": "salari",
+    "locale": "ru",
+    "message": "Зарплата"
+  },
+  {
+    "message_key": "dataContractacio",
+    "locale": "ru",
+    "message": "Дата найма"
+  },
+  {
+    "message_key": "departament",
+    "locale": "ru",
+    "message": "Отдел"
+  },
+  {
+    "message_key": "addEditSalari",
+    "locale": "ru",
+    "message": "Зарплата:"
+  },
+  {
+    "message_key": "addEditDepartament",
+    "locale": "ru",
+    "message": "Отдел:"
+  },
+  {
+    "message_key": "addEditContractacio",
+    "locale": "ru",
+    "message": "Дата найма:"
+  },
+  {
+    "message_key": "editarEmpleat",
+    "locale": "ru",
+    "message": "Редактировать сотрудника"
+  },
+  {
+    "message_key": "asistenciasEmpleat",
+    "locale": "ru",
+    "message": "Посещения сотрудника"
+  },
+  {
+    "message_key": "data",
+    "locale": "ru",
+    "message": "Дата"
+  },
+  {
+    "message_key": "horaEntrada",
+    "locale": "ru",
+    "message": "Время входа"
+  },
+  {
+    "message_key": "horaSortida",
+    "locale": "ru",
+    "message": "Время выхода"
+  },
+  {
+    "message_key": "seleccionarEmpleat",
+    "locale": "ru",
+    "message": "Выбрать сотрудника:"
+  },
+  {
+    "message_key": "filtrar",
+    "locale": "ru",
+    "message": "Фильтр"
+  },
+  {
+    "message_key": "idNomina",
+    "locale": "ru",
+    "message": "ID зарплаты"
+  },
+  {
+    "message_key": "totalBrut",
+    "locale": "ru",
+    "message": "Общий брутто"
+  },
+  {
+    "message_key": "totalNet",
+    "locale": "ru",
+    "message": "Общий нетто"
+  },
+  {
+    "message_key": "dataPagament",
+    "locale": "ru",
+    "message": "Дата выплаты"
+  },
+  {
+    "message_key": "detallsNomina",
+    "locale": "ru",
+    "message": "Детали зарплаты"
+  },
+  {
+    "message_key": "llistatFacturacio",
+    "locale": "ru",
+    "message": "Список счетов"
+  },
+  {
+    "message_key": "historialPagament",
+    "locale": "ru",
+    "message": "История платежей"
+  },
+  {
+    "message_key": "reportsFinancer",
+    "locale": "ru",
+    "message": "Финансовые отчеты"
+  },
+  {
+    "message_key": "generarFactura",
+    "locale": "ru",
+    "message": "Создать счета"
+  },
+  {
+    "message_key": "factures",
+    "locale": "ru",
+    "message": "Счета"
+  },
+  {
+    "message_key": "dataFactura",
+    "locale": "ru",
+    "message": "Дата счета"
+  },
+  {
+    "message_key": "finances.cerrarSesion",
+    "locale": "ru",
+    "message": "Выйти"
+  },
+  {
+    "message_key": "seleccionarClient",
+    "locale": "ru",
+    "message": "Выбрать клиента"
+  },
+  {
+    "message_key": "nFactura",
+    "locale": "ru",
+    "message": "№ счета"
+  },
+{
+    "message_key": "grafics",
+    "locale": "ru",
+    "message": "Графики"
+},
+{
+    "message_key": "descarregaManual",
+    "locale": "ru",
+    "message": "Загрузить Руководство по приложению"
+},
+{
+    "message_key": "creadores",
+    "locale": "ru",
+    "message": "Создатели страницы: "
+},
+{
+    "message_key": "ventasMensuales",
+    "locale": "ru",
+    "message": "Ежемесячные продажи"
+  },
+  {
+    "message_key": "VentasAnuales",
+    "locale": "ru",
+    "message": "Годовые продажи"
+  },
+  {
+    "message_key": "ordresCompra",
+    "locale": "ru",
+    "message": "Заказы на покупку"
+  },
+  {
+    "message_key": "ventasSemanales",
+    "locale": "ru",
+    "message": "Еженедельные продажи"
+  },
+{
+    "message_key": "filtrarr",
+    "locale": "ru",
+    "message": "Фильтровать"
+  },
+{
+    "message_key": "buscar",
+    "locale": "ru",
+    "message": "Искать"
+  },
+{
+    "message_key": "buscarValor",
+    "locale": "ru",
+    "message": "Искать значение"
+  },
+{
+    "message_key": "ordenar",
+    "locale": "ru",
+    "message": "Сортировать"
+  },
+{
+    "message_key": "ascendent",
+    "locale": "ru",
+    "message": "По возрастанию"
+  },
+{
+    "message_key": "descendent",
+    "locale": "ru",
+    "message": "По убыванию"
+  },
+{
+  "message_key": "tornar",
+  "locale": "ru",
+  "message": "Вернуться"
+}
+]

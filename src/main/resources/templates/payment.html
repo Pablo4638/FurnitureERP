@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago Seguro | NaturaMobles</title>
+    <link rel="icon" th:href="@{/imatges/logo.png}" type="image/png" sizes="32x32" S
+        media="(prefers-color-scheme: light)">
+    <link rel="icon" th:href="@{/imatges/logo1.png}" type="image/png" sizes="32x32"
+        media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .payment-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .payment-container h2 {
+            margin-top: 0;
+            font-weight: 600;
+            color: #3b82f6;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .payment-container h3 {
+            text-align: center;
+            font-size: 18px;
+            color: #4b5563;
+            margin-top: 0;
+        }
+
+        .payment-container p {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .card-icons {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .card-icons img {
+            width: 60px;
+            margin: 0 10px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #333;
+            font-size: 16px;
+        }
+
+        #card-element {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            font-size: 16px;
+        }
+
+        #card-errors {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+
+        button.loading {
+            background: #fbbf24;
+            cursor: not-allowed;
+        }
+
+        button.success {
+            background: #10b981;
+            color: white;
+        }
+
+        .company-name {
+            text-align: center;
+            font-size: 20px;
+            color: #3b82f6;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #9ca3af;
+            margin-top: 20px;
+        }
+
+        .loading-spinner {
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #fff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .success-icon {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="payment-container">
+        <div class="company-name">
+            NaturaMobles
+        </div>
+        <h2>Pago Seguro</h2>
+        <h3>Completa tu compra en pocos pasos</h3>
+        <p>Introduce los detalles de tu tarjeta para completar el pago.</p>
+        <div class="card-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="MasterCard">
+        </div>
+        <form id="payment-form">
+            <input type="hidden" id="facturaId" name="facturaId" th:value="${factura.id_factura}">
+            <div class="form-group">
+                <label for="amount">Total</label>
+                <input type="hidden" name="amount" th:value="${factura.total}" id="amount">
+                <label name="amount" th:text="${factura.total}"></label>
+            </div>
+
+            <div id="card-element" class="form-group">
+            </div>
+            <button id="pay-button" type="submit">Pagar Ahora</button>
+            <div id="card-errors" role="alert"></div>
+        </form>
+        <div class="footer">
+            &copy; 2024 NaturaMobles | Todos los derechos reservados
+        </div>
+    </div>
+
+    <script>
+        var stripe = Stripe('pk_test_51QVFTTFYX4xkM0hhqiniYWeFDItJxEt2o8se1pL5NmCovUb3dXSYclr6zzl8S800Z5lcOXCidmzp8sE9jdBZgmmH00rhQFAjlv');
+        var elements = stripe.elements();
+        var card = elements.create('card');
+        card.mount('#card-element');
+
+        var form = document.getElementById('payment-form');
+        var payButton = document.getElementById('pay-button');
+        var cardErrors = document.getElementById('card-errors');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Change button to loading state
+            payButton.innerHTML = '<div class="loading-spinner"></div> Cargando...';
+            payButton.classList.add('loading');
+            payButton.disabled = true;
+
+            stripe.createToken(card).then(function (result) {
+                if (result.error) {
+                    cardErrors.textContent = result.error.message;
+                    // Reset button if there's an error
+                    payButton.innerHTML = 'Pagar Ahora';
+                    payButton.classList.remove('loading');
+                    payButton.disabled = false;
+                } else {
+                    var amountInEuros = document.getElementById('amount').value;
+                    var amountInCents = Math.round(amountInEuros * 100);
+                    var facturaId = document.getElementById('facturaId').value;
+                    fetch('/api/stripe/charge', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            amount: amountInCents,
+                            source: result.token.id,
+                            facturaId: facturaId
+                        })
+                    }).then(function (response) {
+                        return response.json();
+                    }).then(function (data) {
+                        if (data.status === 'success') {
+                            // Change button to success state
+                            payButton.innerHTML = '<span class="success-icon">✔</span> Pago Exitoso';
+                            payButton.classList.add('success');
+                            payButton.disabled = true;
+
+                            // Redirect after 2-3 seconds
+                            setTimeout(function () {
+                                window.location.href = data.redirectUrl;
+                            }, 2000);
+                        } else {
+                            cardErrors.textContent = data.error;
+                            payButton.innerHTML = 'Pagar Ahora';
+                            payButton.classList.remove('loading');
+                            payButton.disabled = false;
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

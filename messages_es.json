@@ -1,0 +1,863 @@
+[
+  {
+    "message_key": "accions",
+    "locale": "es",
+    "message": "Acciones"
+  },
+  {
+    "message_key": "addEditDireccio",
+    "locale": "es",
+    "message": "Dirección:"
+  },
+  {
+    "message_key": "addEditEmail",
+    "locale": "es",
+    "message": "Correo electrónico:"
+  },
+  {
+    "message_key": "addEditNom",
+    "locale": "es",
+    "message": "Nombre:"
+  },
+  {
+    "message_key": "addEditTelefon",
+    "locale": "es",
+    "message": "Teléfono:"
+  },
+  {
+    "message_key": "afegir",
+    "locale": "es",
+    "message": "Añadir"
+  },
+  {
+    "message_key": "afegirClient",
+    "locale": "es",
+    "message": "Añadir cliente"
+  },
+  {
+    "message_key": "afegirComanda",
+    "locale": "es",
+    "message": "Añadir pedido"
+  },
+  {
+    "message_key": "afegirOrdre",
+    "locale": "es",
+    "message": "Añadir orden de compra"
+  },
+  {
+    "message_key": "afegirProveidor",
+    "locale": "es",
+    "message": "Añadir proveedor"
+  },
+  {
+    "message_key": "altaClient",
+    "locale": "es",
+    "message": "Alta cliente"
+  },
+  {
+    "message_key": "altaComanda",
+    "locale": "es",
+    "message": "Alta pedido"
+  },
+  {
+    "message_key": "cerrarSesion",
+    "locale": "es",
+    "message": "Cerrar sesión"
+  },
+  {
+    "message_key": "client",
+    "locale": "es",
+    "message": "Cliente"
+  },
+  {
+    "message_key": "client:",
+    "locale": "es",
+    "message": "Cliente: "
+  },
+  {
+    "message_key": "clientVIP",
+    "locale": "es",
+    "message": "Cliente VIP"
+  },
+  {
+    "message_key": "clients",
+    "locale": "es",
+    "message": "Clientes"
+  },
+  {
+    "message_key": "comandes",
+    "locale": "es",
+    "message": "Pedidos"
+  },
+  {
+    "message_key": "compres.cerrarSesion",
+    "locale": "es",
+    "message": "Cerrar sesión"
+  },
+  {
+    "message_key": "crear",
+    "locale": "es",
+    "message": "Crear"
+  },
+  {
+    "message_key": "crearComanda",
+    "locale": "es",
+    "message": "Crear pedido"
+  },
+  {
+    "message_key": "dataComanda",
+    "locale": "es",
+    "message": "Fecha pedido"
+  },
+  {
+    "message_key": "dataOrdre",
+    "locale": "es",
+    "message": "Fecha orden"
+  },
+  {
+    "message_key": "definicioEmpresa",
+    "locale": "es",
+    "message": "Empresa líder en venta de muebles"
+  },
+  {
+    "message_key": "descripcio",
+    "locale": "es",
+    "message": "Descripción"
+  },
+  {
+    "message_key": "detallsDeLaComanda",
+    "locale": "es",
+    "message": "Detalles del pedido"
+  },
+  {
+    "message_key": "direccio",
+    "locale": "es",
+    "message": "Dirección"
+  },
+  {
+    "message_key": "editarClient",
+    "locale": "es",
+    "message": "Editar cliente"
+  },
+  {
+    "message_key": "editarComanda",
+    "locale": "es",
+    "message": "Editar pedido"
+  },
+  {
+    "message_key": "editarOrdre",
+    "locale": "es",
+    "message": "Editar orden"
+  },
+  {
+    "message_key": "editarProveidor",
+    "locale": "es",
+    "message": "Editar proveedor"
+  },
+  {
+    "message_key": "email",
+    "locale": "es",
+    "message": "Correo electrónico"
+  },
+  {
+    "message_key": "empleatsTotals",
+    "locale": "es",
+    "message": "Total empleados"
+  },
+  {
+    "message_key": "estat",
+    "locale": "es",
+    "message": "Estado"
+  },
+  {
+    "message_key": "historialComanda",
+    "locale": "es",
+    "message": "Historial pedido"
+  },
+  {
+    "message_key": "historialOrdres",
+    "locale": "es",
+    "message": "Historial órdenes de compra"
+  },
+  {
+    "message_key": "idComanda",
+    "locale": "es",
+    "message": "ID pedido"
+  },
+  {
+    "message_key": "idOrdre",
+    "locale": "es",
+    "message": "ID orden"
+  },
+  {
+    "message_key": "llistatClient",
+    "locale": "es",
+    "message": "Listado clientes"
+  },
+  {
+    "message_key": "llistatComanda",
+    "locale": "es",
+    "message": "Listado pedidos"
+  },
+  {
+    "message_key": "llistatOrdres",
+    "locale": "es",
+    "message": "Listado órdenes de compra"
+  },
+  {
+    "message_key": "llistatProveidor",
+    "locale": "es",
+    "message": "Listado proveedores"
+  },
+  {
+    "message_key": "mostrarTots",
+    "locale": "es",
+    "message": "Mostrar todos"
+  },
+  {
+    "message_key": "nom",
+    "locale": "es",
+    "message": "Nombre"
+  },
+  {
+    "message_key": "ordeCompraRecent",
+    "locale": "es",
+    "message": "Órdenes de compra recientes"
+  },
+  {
+    "message_key": "ordresDeCompra",
+    "locale": "es",
+    "message": "Órdenes de compra"
+  },
+  {
+    "message_key": "perfil",
+    "locale": "es",
+    "message": "Perfil"
+  },
+  {
+    "message_key": "perfil.cerrarSesion",
+    "locale": "es",
+    "message": "Cerrar sesión"
+  },
+  {
+    "message_key": "preu",
+    "locale": "es",
+    "message": "Precio"
+  },
+  {
+    "message_key": "precioProducte",
+    "locale": "es",
+    "message": "Precio producto"
+  },
+  {
+    "message_key": "producte",
+    "locale": "es",
+    "message": "Producto"
+  },
+  {
+    "message_key": "productesDe",
+    "locale": "es",
+    "message": "Productos de "
+  },
+  {
+    "message_key": "proveidor",
+    "locale": "es",
+    "message": "Proveedor"
+  },
+  {
+    "message_key": "proveidors",
+    "locale": "es",
+    "message": "Proveedores"
+  },
+  {
+    "message_key": "quantitat",
+    "locale": "es",
+    "message": "Cantidad"
+  },
+  {
+    "message_key": "recordatori",
+    "locale": "es",
+    "message": "Recordatorio"
+  },
+  {
+    "message_key": "saludo",
+    "locale": "es",
+    "message": "Hola, "
+  },
+  {
+    "message_key": "seleccionarProveidor",
+    "locale": "es",
+    "message": "Seleccionar proveedor"
+  },
+  {
+    "message_key": "subtotal",
+    "locale": "es",
+    "message": "Subtotal"
+  },
+  {
+    "message_key": "taulerDeControl.cerrarSesion",
+    "locale": "es",
+    "message": "Cerrar sesión"
+  },
+  {
+    "message_key": "taulerDeControl.compres",
+    "locale": "es",
+    "message": "Compras"
+  },
+  {
+    "message_key": "taulerDeControl.configuracio",
+    "locale": "es",
+    "message": "Configuración"
+  },
+  {
+    "message_key": "taulerDeControl.finances",
+    "locale": "es",
+    "message": "Finanzas"
+  },
+  {
+    "message_key": "taulerDeControl.inventari",
+    "locale": "es",
+    "message": "Inventario"
+  },
+  {
+    "message_key": "taulerDeControl.title",
+    "locale": "es",
+    "message": "Panel de control"
+  },
+  {
+    "message_key": "taulerDeControl.usuari",
+    "locale": "es",
+    "message": "Usuarios"
+  },
+  {
+    "message_key": "taulerDeControl.ventas",
+    "locale": "es",
+    "message": "Ventas"
+  },
+  {
+    "message_key": "telefon",
+    "locale": "es",
+    "message": "Teléfono"
+  },
+  {
+    "message_key": "tipus",
+    "locale": "es",
+    "message": "Tipo"
+  },
+  {
+    "message_key": "tipusClient",
+    "locale": "es",
+    "message": "Tipo de cliente: "
+  },
+  {
+    "message_key": "total",
+    "locale": "es",
+    "message": "Total"
+  },
+  {
+    "message_key": "update",
+    "locale": "es",
+    "message": "Actualizar"
+  },
+  {
+    "message_key": "ventas.cerrarSesion",
+    "locale": "es",
+    "message": "Cerrar sesión"
+  },
+  {
+    "message_key": "ventasDiarias",
+    "locale": "es",
+    "message": "Ventas diarias"
+  },  
+  {
+    "message_key": "llistatProductes",
+    "locale": "es",
+    "message": "Listado de Productos"
+  },
+  {
+    "message_key": "afegirProducte",
+    "locale": "es",
+    "message": "Agregar Producto"
+  },
+  {
+    "message_key": "llistatCategories",
+    "locale": "es",
+    "message": "Listado de Categorías"
+  },
+  {
+    "message_key": "entrades",
+    "locale": "es",
+    "message": "Entradas"
+  },
+  {
+    "message_key": "sortides",
+    "locale": "es",
+    "message": "Salidas"
+  },
+  {
+    "message_key": "historialMoviments",
+    "locale": "es",
+    "message": "Historial de Movimientos"
+  },
+  {
+    "message_key": "inventari.cerrarSesion",
+    "locale": "es",
+    "message": "Cerrar Sesión"
+  },
+  {
+    "message_key": "productes",
+    "locale": "es",
+    "message": "Productos"
+  },
+  {
+    "message_key": "nomProducte",
+    "locale": "es",
+    "message": "Nombre del Producto"
+  },
+  {
+    "message_key": "categoria",
+    "locale": "es",
+    "message": "Categoría"
+  },
+  {
+    "message_key": "stockActual",
+    "locale": "es",
+    "message": "Stock Actual"
+  },
+  {
+    "message_key": "unitatDeMesura",
+    "locale": "es",
+    "message": "Unidad de Medida"
+  },
+  {
+    "message_key": "addEditDescripcio",
+    "locale": "es",
+    "message": "Descripción:"
+  },
+  {
+    "message_key": "addEditCategoria",
+    "locale": "es",
+    "message": "Categoría:"
+  },
+  {
+    "message_key": "seleccionar",
+    "locale": "es",
+    "message": "Seleccionar..."
+  },
+  {
+    "message_key": "addEditProveidor",
+    "locale": "es",
+    "message": "Proveedor:"
+  },
+  {
+    "message_key": "addEditPreu",
+    "locale": "es",
+    "message": "Precio:"
+  },
+  {
+    "message_key": "addEditStockActual",
+    "locale": "es",
+    "message": "Stock Actual:"
+  },
+  {
+    "message_key": "afegirCategoria",
+    "locale": "es",
+    "message": "Agregar Categoría"
+  },
+  {
+    "message_key": "categories",
+    "locale": "es",
+    "message": "Categorías"
+  },
+  {
+    "message_key": "nomCategoria",
+    "locale": "es",
+    "message": "Nombre de la Categoría"
+  },
+  {
+    "message_key": "addEditNomCategoria",
+    "locale": "es",
+    "message": "Nombre de la Categoría:"
+  },
+  {
+    "message_key": "addEditUnitatMesura",
+    "locale": "es",
+    "message": "Unidad de Medida:"
+  },
+  {
+    "message_key": "editarProducte",
+    "locale": "es",
+    "message": "Editar Producto"
+  },
+  {
+    "message_key": "dataMoviment",
+    "locale": "es",
+    "message": "Fecha del Movimiento"
+  },
+  {
+    "message_key": "tipusMoviment",
+    "locale": "es",
+    "message": "Tipo de Movimiento"
+  },
+{
+    "message_key": "usuaris",
+    "locale": "es",
+    "message": "Usuarios"
+  },
+{
+    "message_key": "afegirUsuari",
+    "locale": "es",
+    "message": "Agregar usuario"
+  },
+{
+    "message_key": "usuari.cerrarSesion",
+    "locale": "es",
+    "message": "Cerrar sesión"
+  },
+{
+    "message_key": "usuarisIseguretat",
+    "locale": "es",
+    "message": "Usuarios y seguridad"
+  },
+{
+    "message_key": "nomEmpleat",
+    "locale": "es",
+    "message": "Nombre del empleado"
+  },
+{
+    "message_key": "usuari",
+    "locale": "es",
+    "message": "Usuario"
+  },
+{
+    "message_key": "rol",
+    "locale": "es",
+    "message": "Rol"
+  },
+{
+    "message_key": "addEditUsuari",
+    "locale": "es",
+    "message": "Usuario:"
+  },
+{
+    "message_key": "addEditEmpleat",
+    "locale": "es",
+    "message": "Empleado:"
+  },
+{
+    "message_key": "addEditRol",
+    "locale": "es",
+    "message": "Rol:"
+  },
+{
+    "message_key": "editarUsuari",
+    "locale": "es",
+    "message": "Editar usuario"
+  },
+{
+    "message_key": "escogerIdioma",
+    "locale": "es",
+    "message": "Escoger idioma"
+  },
+{
+    "message_key": "addEditCorreu",
+    "locale": "es",
+    "message": "Correo:"
+  },
+{
+    "message_key": "cambiarContrasenya",
+    "locale": "es",
+    "message": "Cambiar contraseña"
+  },
+{
+    "message_key": "eliminarFoto",
+    "locale": "es",
+    "message": "Eliminar foto de perfil"
+  },
+{
+    "message_key": "estasSeguro",
+    "locale": "es",
+    "message": "¿Estás seguro de que deseas eliminar la foto de perfil?"
+  },
+{
+    "message_key": "cerrar",
+    "locale": "es",
+    "message": "Cerrar"
+  },
+{
+    "message_key": "canviContrasenya",
+    "locale": "es",
+    "message": "Cambio de contraseña"
+  },
+{
+    "message_key": "contrasenya",
+    "locale": "es",
+    "message": "Contraseña"
+  },
+{
+    "message_key": "confirmarContrasenya",
+    "locale": "es",
+    "message": "Confirmar contraseña"
+  },
+{
+    "message_key": "guardar",
+    "locale": "es",
+    "message": "Guardar"
+  },
+{
+    "message_key": "subir",
+    "locale": "es",
+    "message": "Enviar"
+  },
+{
+    "message_key": "subirFoto",
+    "locale": "es",
+    "message": "Enviar foto de perfil"
+  },
+{
+    "message_key": "llistatEmpleats",
+    "locale": "es",
+    "message": "Listado de empleados"
+  },
+{
+    "message_key": "afegirEmpleat",
+    "locale": "es",
+    "message": "Agregar empleado"
+  },
+{
+    "message_key": "registreAssistencia",
+    "locale": "es",
+    "message": "Registro de asistencia"
+  },
+{
+    "message_key": "historialAssistencia",
+    "locale": "es",
+    "message": "Historial de asistencia"
+  },
+{
+    "message_key": "llistatNomines",
+    "locale": "es",
+    "message": "Listado de nóminas"
+  },
+{
+    "message_key": "generarNomina",
+    "locale": "es",
+    "message": "Generar nómina"
+  },
+{
+    "message_key": "rrhh.cerrarSesion",
+    "locale": "es",
+    "message": "Cerrar sesión"
+  },
+{
+    "message_key": "empleats",
+    "locale": "es",
+    "message": "Empleados"
+  },
+{
+    "message_key": "salari",
+    "locale": "es",
+    "message": "Salario"
+  },
+{
+    "message_key": "dataContractacio",
+    "locale": "es",
+    "message": "Fecha de contratación"
+  },
+{
+    "message_key": "departament",
+    "locale": "es",
+    "message": "Departamento"
+  },
+{
+    "message_key": "addEditSalari",
+    "locale": "es",
+    "message": "Salario:"
+  },
+{
+    "message_key": "addEditDepartament",
+    "locale": "es",
+    "message": "Departamento:"
+  },
+{
+    "message_key": "addEditContractacio",
+    "locale": "es",
+    "message": "Fecha de contratación:"
+  },
+{
+    "message_key": "editarEmpleat",
+    "locale": "es",
+    "message": "Editar empleado"
+  },
+{
+    "message_key": "asistenciasEmpleat",
+    "locale": "es",
+    "message": "Asistencias del empleado"
+  },
+{
+    "message_key": "data",
+    "locale": "es",
+    "message": "Fecha"
+  },
+{
+    "message_key": "horaEntrada",
+    "locale": "es",
+    "message": "Hora de entrada"
+  },
+{
+    "message_key": "horaSortida",
+    "locale": "es",
+    "message": "Hora de salida"
+  },
+{
+    "message_key": "seleccionarEmpleat",
+    "locale": "es",
+    "message": "Seleccionar un empleado:"
+  },
+{
+    "message_key": "filtrar",
+    "locale": "es",
+    "message": "Filtrar"
+  },
+{
+    "message_key": "idNomina",
+    "locale": "es",
+    "message": "ID de nómina"
+  },
+{
+    "message_key": "totalBrut",
+    "locale": "es",
+    "message": "Total bruto"
+  },
+{
+    "message_key": "totalNet",
+    "locale": "es",
+    "message": "Total neto"
+  },
+{
+    "message_key": "dataPagament",
+    "locale": "es",
+    "message": "Fecha de pago"
+  },
+{
+    "message_key": "detallsNomina",
+    "locale": "es",
+    "message": "Detalles de la nómina"
+  },
+{
+    "message_key": "llistatFacturacio",
+    "locale": "es",
+    "message": "Listado de facturación"
+  },
+{
+    "message_key": "historialPagament",
+    "locale": "es",
+    "message": "Historial de pagos"
+  },
+{
+    "message_key": "reportsFinancer",
+    "locale": "es",
+    "message": "Informes financieros"
+  },
+{
+    "message_key": "generarFactura",
+    "locale": "es",
+    "message": "Generar facturas"
+  },
+{
+    "message_key": "factures",
+    "locale": "es",
+    "message": "Facturas"
+  },
+{
+    "message_key": "dataFactura",
+    "locale": "es",
+    "message": "Fecha de factura"
+  },
+{
+    "message_key": "finances.cerrarSesion",
+    "locale": "es",
+    "message": "Cerrar sesión"
+  },
+{
+    "message_key": "seleccionarClient",
+    "locale": "es",
+    "message": "Seleccionar cliente"
+  },
+{
+    "message_key": "nFactura",
+    "locale": "es",
+    "message": "Nº de Factura"
+  },
+{
+    "message_key": "grafics",
+    "locale": "es",
+    "message": "Gráficos"
+},
+{
+    "message_key": "descarregaManual",
+    "locale": "es",
+    "message": "Descargar manualmente la aplicación"
+},
+{
+    "message_key": "creadores",
+    "locale": "es",
+    "message": "Creadores de la página: "
+},
+{
+    "message_key": "ventasMensuales",
+    "locale": "es",
+    "message": "Ventas Mensuales"
+  },
+  {
+    "message_key": "VentasAnuales",
+    "locale": "es",
+    "message": "Ventas Anuales"
+  },
+  {
+    "message_key": "ordresCompra",
+    "locale": "es",
+    "message": "Órdenes de Compra"
+  },
+  {
+    "message_key": "ventasSemanales",
+    "locale": "es",
+    "message": "Ventas Semanales"
+  },
+{
+    "message_key": "filtrarr",
+    "locale": "es",
+    "message": "Filtrar"
+  },
+{
+    "message_key": "buscar",
+    "locale": "es",
+    "message": "Buscar"
+  },
+{
+    "message_key": "buscarValor",
+    "locale": "es",
+    "message": "Buscar valor"
+  },
+{
+    "message_key": "ordenar",
+    "locale": "es",
+    "message": "Ordenar"
+  },
+{
+    "message_key": "ascendent",
+    "locale": "es",
+    "message": "Ascendente"
+  },
+{
+    "message_key": "descendent",
+    "locale": "es",
+    "message": "Descendente"
+  },
+{
+  "message_key": "tornar",
+  "locale": "es",
+  "message": "Volver"
+}
+]
+

@@ -1,0 +1,862 @@
+[
+  {
+    "message_key": "accions",
+    "locale": "fr",
+    "message": "Actions"
+  },
+  {
+    "message_key": "addEditDireccio",
+    "locale": "fr",
+    "message": "Adresse:"
+  },
+  {
+    "message_key": "addEditEmail",
+    "locale": "fr",
+    "message": "E-mail:"
+  },
+  {
+    "message_key": "addEditNom",
+    "locale": "fr",
+    "message": "Nom:"
+  },
+  {
+    "message_key": "addEditTelefon",
+    "locale": "fr",
+    "message": "Téléphone:"
+  },
+  {
+    "message_key": "afegir",
+    "locale": "fr",
+    "message": "Ajouter"
+  },
+  {
+    "message_key": "afegirClient",
+    "locale": "fr",
+    "message": "Ajouter un client"
+  },
+  {
+    "message_key": "afegirComanda",
+    "locale": "fr",
+    "message": "Ajouter une commande"
+  },
+  {
+    "message_key": "afegirOrdre",
+    "locale": "fr",
+    "message": "Ajouter un bon de commande"
+  },
+  {
+    "message_key": "afegirProveidor",
+    "locale": "fr",
+    "message": "Ajouter un fournisseur"
+  },
+  {
+    "message_key": "altaClient",
+    "locale": "fr",
+    "message": "Enregistrer un client"
+  },
+  {
+    "message_key": "altaComanda",
+    "locale": "fr",
+    "message": "Enregistrer une commande"
+  },
+  {
+    "message_key": "cerrarSesion",
+    "locale": "fr",
+    "message": "Se déconnecter"
+  },
+  {
+    "message_key": "client",
+    "locale": "fr",
+    "message": "Client"
+  },
+  {
+    "message_key": "client:",
+    "locale": "fr",
+    "message": "Client: "
+  },
+  {
+    "message_key": "clientVIP",
+    "locale": "fr",
+    "message": "Client VIP"
+  },
+  {
+    "message_key": "clients",
+    "locale": "fr",
+    "message": "Clients"
+  },
+  {
+    "message_key": "comandes",
+    "locale": "fr",
+    "message": "Commandes"
+  },
+  {
+    "message_key": "compres.cerrarSesion",
+    "locale": "fr",
+    "message": "Se déconnecter"
+  },
+  {
+    "message_key": "crear",
+    "locale": "fr",
+    "message": "Créer"
+  },
+  {
+    "message_key": "crearComanda",
+    "locale": "fr",
+    "message": "Créer une commande"
+  },
+  {
+    "message_key": "dataComanda",
+    "locale": "fr",
+    "message": "Date de la commande"
+  },
+  {
+    "message_key": "dataOrdre",
+    "locale": "fr",
+    "message": "Date de la commande"
+  },
+  {
+    "message_key": "definicioEmpresa",
+    "locale": "fr",
+    "message": "Entreprise leader dans la vente de meubles"
+  },
+  {
+    "message_key": "descripcio",
+    "locale": "fr",
+    "message": "Description"
+  },
+  {
+    "message_key": "detallsDeLaComanda",
+    "locale": "fr",
+    "message": "Détails de la commande"
+  },
+  {
+    "message_key": "direccio",
+    "locale": "fr",
+    "message": "Adresse"
+  },
+  {
+    "message_key": "editarClient",
+    "locale": "fr",
+    "message": "Modifier le client"
+  },
+  {
+    "message_key": "editarComanda",
+    "locale": "fr",
+    "message": "Modifier la commande"
+  },
+  {
+    "message_key": "editarOrdre",
+    "locale": "fr",
+    "message": "Modifier la commande"
+  },
+  {
+    "message_key": "editarProveidor",
+    "locale": "fr",
+    "message": "Modifier le fournisseur"
+  },
+  {
+    "message_key": "email",
+    "locale": "fr",
+    "message": "E-mail"
+  },
+  {
+    "message_key": "empleatsTotals",
+    "locale": "fr",
+    "message": "Total des employés"
+  },
+  {
+    "message_key": "estat",
+    "locale": "fr",
+    "message": "Statut"
+  },
+  {
+    "message_key": "historialComanda",
+    "locale": "fr",
+    "message": "Historique des commandes"
+  },
+  {
+    "message_key": "historialOrdres",
+    "locale": "fr",
+    "message": "Historique des bons de commande"
+  },
+  {
+    "message_key": "idComanda",
+    "locale": "fr",
+    "message": "ID de la commande"
+  },
+  {
+    "message_key": "idOrdre",
+    "locale": "fr",
+    "message": "ID de la commande"
+  },
+  {
+    "message_key": "llistatClient",
+    "locale": "fr",
+    "message": "Liste des clients"
+  },
+  {
+    "message_key": "llistatComanda",
+    "locale": "fr",
+    "message": "Liste des commandes"
+  },
+  {
+    "message_key": "llistatOrdres",
+    "locale": "fr",
+    "message": "Liste des bons de commande"
+  },
+  {
+    "message_key": "llistatProveidor",
+    "locale": "fr",
+    "message": "Liste des fournisseurs"
+  },
+  {
+    "message_key": "mostrarTots",
+    "locale": "fr",
+    "message": "Afficher tout"
+  },
+  {
+    "message_key": "nom",
+    "locale": "fr",
+    "message": "Nom"
+  },
+  {
+    "message_key": "ordeCompraRecent",
+    "locale": "fr",
+    "message": "Bons de commande récents"
+  },
+  {
+    "message_key": "ordresDeCompra",
+    "locale": "fr",
+    "message": "Bons de commande"
+  },
+  {
+    "message_key": "perfil",
+    "locale": "fr",
+    "message": "Profil"
+  },
+  {
+    "message_key": "perfil.cerrarSesion",
+    "locale": "fr",
+    "message": "Se déconnecter"
+  },
+  {
+    "message_key": "preu",
+    "locale": "fr",
+    "message": "Prix"
+  },
+  {
+    "message_key": "precioProducte",
+    "locale": "fr",
+    "message": "Prix du produit"
+  },
+  {
+    "message_key": "producte",
+    "locale": "fr",
+    "message": "Produit"
+  },
+  {
+    "message_key": "productesDe",
+    "locale": "fr",
+    "message": "Produits de "
+  },
+  {
+    "message_key": "proveidor",
+    "locale": "fr",
+    "message": "Fournisseur"
+  },
+  {
+    "message_key": "proveidors",
+    "locale": "fr",
+    "message": "Fournisseurs"
+  },
+  {
+    "message_key": "quantitat",
+    "locale": "fr",
+    "message": "Quantité"
+  },
+  {
+    "message_key": "recordatori",
+    "locale": "fr",
+    "message": "Rappel"
+  },
+  {
+    "message_key": "saludo",
+    "locale": "fr",
+    "message": "Bonjour, "
+  },
+  {
+    "message_key": "seleccionarProveidor",
+    "locale": "fr",
+    "message": "Sélectionner un fournisseur"
+  },
+  {
+    "message_key": "subtotal",
+    "locale": "fr",
+    "message": "Sous-total"
+  },
+  {
+    "message_key": "taulerDeControl.cerrarSesion",
+    "locale": "fr",
+    "message": "Se déconnecter"
+  },
+  {
+    "message_key": "taulerDeControl.compres",
+    "locale": "fr",
+    "message": "Achats"
+  },
+  {
+    "message_key": "taulerDeControl.configuracio",
+    "locale": "fr",
+    "message": "Paramètres"
+  },
+  {
+    "message_key": "taulerDeControl.finances",
+    "locale": "fr",
+    "message": "Finances"
+  },
+  {
+    "message_key": "taulerDeControl.inventari",
+    "locale": "fr",
+    "message": "Inventaire"
+  },
+  {
+    "message_key": "taulerDeControl.title",
+    "locale": "fr",
+    "message": "Tableau de bord"
+  },
+  {
+    "message_key": "taulerDeControl.usuari",
+    "locale": "fr",
+    "message": "Utilisateurs"
+  },
+  {
+    "message_key": "taulerDeControl.ventas",
+    "locale": "fr",
+    "message": "Ventes"
+  },
+  {
+    "message_key": "telefon",
+    "locale": "fr",
+    "message": "Téléphone"
+  },
+  {
+    "message_key": "tipus",
+    "locale": "fr",
+    "message": "Type"
+  },
+  {
+    "message_key": "tipusClient",
+    "locale": "fr",
+    "message": "Type de client: "
+  },
+  {
+    "message_key": "total",
+    "locale": "fr",
+    "message": "Total"
+  },
+  {
+    "message_key": "update",
+    "locale": "fr",
+    "message": "Mettre à jour"
+  },
+  {
+    "message_key": "ventas.cerrarSesion",
+    "locale": "fr",
+    "message": "Se déconnecter"
+  },
+  {
+    "message_key": "ventasDiarias",
+    "locale": "fr",
+    "message": "Ventes quotidiennes"
+  },
+  {
+    "message_key": "llistatProductes",
+    "locale": "fr",
+    "message": "Liste des produits"
+  },
+  {
+    "message_key": "afegirProducte",
+    "locale": "fr",
+    "message": "Ajouter un produit"
+  },
+  {
+    "message_key": "llistatCategories",
+    "locale": "fr",
+    "message": "Liste des catégories"
+  },
+  {
+    "message_key": "entrades",
+    "locale": "fr",
+    "message": "Entrées"
+  },
+  {
+    "message_key": "sortides",
+    "locale": "fr",
+    "message": "Sorties"
+  },
+  {
+    "message_key": "historialMoviments",
+    "locale": "fr",
+    "message": "Historique des mouvements"
+  },
+  {
+    "message_key": "inventari.cerrarSesion",
+    "locale": "fr",
+    "message": "Se déconnecter"
+  },
+  {
+    "message_key": "productes",
+    "locale": "fr",
+    "message": "Produits"
+  },
+  {
+    "message_key": "nomProducte",
+    "locale": "fr",
+    "message": "Nom du produit"
+  },
+  {
+    "message_key": "categoria",
+    "locale": "fr",
+    "message": "Catégorie"
+  },
+  {
+    "message_key": "stockActual",
+    "locale": "fr",
+    "message": "Stock actuel"
+  },
+  {
+    "message_key": "unitatDeMesura",
+    "locale": "fr",
+    "message": "Unité de mesure"
+  },
+  {
+    "message_key": "addEditDescripcio",
+    "locale": "fr",
+    "message": "Description:"
+  },
+  {
+    "message_key": "addEditCategoria",
+    "locale": "fr",
+    "message": "Catégorie:"
+  },
+  {
+    "message_key": "seleccionar",
+    "locale": "fr",
+    "message": "Sélectionner..."
+  },
+  {
+    "message_key": "addEditProveidor",
+    "locale": "fr",
+    "message": "Fournisseur:"
+  },
+  {
+    "message_key": "addEditPreu",
+    "locale": "fr",
+    "message": "Prix:"
+  },
+  {
+    "message_key": "addEditStockActual",
+    "locale": "fr",
+    "message": "Stock actuel:"
+  },
+  {
+    "message_key": "afegirCategoria",
+    "locale": "fr",
+    "message": "Ajouter une catégorie"
+  },
+  {
+    "message_key": "categories",
+    "locale": "fr",
+    "message": "Catégories"
+  },
+  {
+    "message_key": "nomCategoria",
+    "locale": "fr",
+    "message": "Nom de la catégorie"
+  },
+  {
+    "message_key": "addEditNomCategoria",
+    "locale": "fr",
+    "message": "Nom de la catégorie:"
+  },
+  {
+    "message_key": "addEditUnitatMesura",
+    "locale": "fr",
+    "message": "Unité de mesure:"
+  },
+  {
+    "message_key": "editarProducte",
+    "locale": "fr",
+    "message": "Modifier le produit"
+  },
+  {
+    "message_key": "dataMoviment",
+    "locale": "fr",
+    "message": "Date du mouvement"
+  },
+  {
+    "message_key": "tipusMoviment",
+    "locale": "fr",
+    "message": "Type de mouvement"
+  },
+  {
+    "message_key": "usuaris",
+    "locale": "fr",
+    "message": "Utilisateurs"
+  },
+  {
+    "message_key": "afegirUsuari",
+    "locale": "fr",
+    "message": "Ajouter un utilisateur"
+  },
+  {
+    "message_key": "usuari.cerrarSesion",
+    "locale": "fr",
+    "message": "Se déconnecter"
+  },
+  {
+    "message_key": "usuarisIseguretat",
+    "locale": "fr",
+    "message": "Utilisateurs et sécurité"
+  },
+  {
+    "message_key": "nomEmpleat",
+    "locale": "fr",
+    "message": "Nom de l'employé"
+  },
+  {
+    "message_key": "usuari",
+    "locale": "fr",
+    "message": "Utilisateur"
+  },
+  {
+    "message_key": "rol",
+    "locale": "fr",
+    "message": "Rôle"
+  },
+  {
+    "message_key": "addEditUsuari",
+    "locale": "fr",
+    "message": "Utilisateur:"
+  },
+  {
+    "message_key": "addEditEmpleat",
+    "locale": "fr",
+    "message": "Employé:"
+  },
+  {
+    "message_key": "addEditRol",
+    "locale": "fr",
+    "message": "Rôle:"
+  },
+  {
+    "message_key": "editarUsuari",
+    "locale": "fr",
+    "message": "Modifier l'utilisateur"
+  },
+  {
+    "message_key": "escogerIdioma",
+    "locale": "fr",
+    "message": "Choisir la langue"
+  },
+  {
+    "message_key": "addEditCorreu",
+    "locale": "fr",
+    "message": "E-mail:"
+  },
+  {
+    "message_key": "cambiarContrasenya",
+    "locale": "fr",
+    "message": "Changer le mot de passe"
+  },
+  {
+    "message_key": "eliminarFoto",
+    "locale": "fr",
+    "message": "Supprimer la photo de profil"
+  },
+  {
+    "message_key": "estasSeguro",
+    "locale": "fr",
+    "message": "Êtes-vous sûr de vouloir supprimer la photo de profil?"
+  },
+  {
+    "message_key": "cerrar",
+    "locale": "fr",
+    "message": "Fermer"
+  },
+  {
+    "message_key": "canviContrasenya",
+    "locale": "fr",
+    "message": "Changement de mot de passe"
+  },
+  {
+    "message_key": "contrasenya",
+    "locale": "fr",
+    "message": "Mot de passe"
+  },
+  {
+    "message_key": "confirmarContrasenya",
+    "locale": "fr",
+    "message": "Confirmer le mot de passe"
+  },
+  {
+    "message_key": "guardar",
+    "locale": "fr",
+    "message": "Enregistrer"
+  },
+  {
+    "message_key": "subir",
+    "locale": "fr",
+    "message": "Téléverser"
+  },
+  {
+    "message_key": "subirFoto",
+    "locale": "fr",
+    "message": "Téléverser photo de profil"
+  },
+  {
+    "message_key": "llistatEmpleats",
+    "locale": "fr",
+    "message": "Liste des employés"
+  },
+  {
+    "message_key": "afegirEmpleat",
+    "locale": "fr",
+    "message": "Ajouter un employé"
+  },
+  {
+    "message_key": "registreAssistencia",
+    "locale": "fr",
+    "message": "Registre de présence"
+  },
+  {
+    "message_key": "historialAssistencia",
+    "locale": "fr",
+    "message": "Historique de présence"
+  },
+  {
+    "message_key": "llistatNomines",
+    "locale": "fr",
+    "message": "Liste des fiches de paie"
+  },
+  {
+    "message_key": "generarNomina",
+    "locale": "fr",
+    "message": "Générer une fiche de paie"
+  },
+  {
+    "message_key": "rrhh.cerrarSesion",
+    "locale": "fr",
+    "message": "Se déconnecter"
+  },
+  {
+    "message_key": "empleats",
+    "locale": "fr",
+    "message": "Employés"
+  },
+  {
+    "message_key": "salari",
+    "locale": "fr",
+    "message": "Salaire"
+  },
+  {
+    "message_key": "dataContractacio",
+    "locale": "fr",
+    "message": "Date d'embauche"
+  },
+  {
+    "message_key": "departament",
+    "locale": "fr",
+    "message": "Département"
+  },
+  {
+    "message_key": "addEditSalari",
+    "locale": "fr",
+    "message": "Salaire:"
+  },
+  {
+    "message_key": "addEditDepartament",
+    "locale": "fr",
+    "message": "Département:"
+  },
+  {
+    "message_key": "addEditContractacio",
+    "locale": "fr",
+    "message": "Date d'embauche:"
+  },
+  {
+    "message_key": "editarEmpleat",
+    "locale": "fr",
+    "message": "Modifier employé"
+  },
+  {
+    "message_key": "asistenciasEmpleat",
+    "locale": "fr",
+    "message": "Présences employé"
+  },
+  {
+    "message_key": "data",
+    "locale": "fr",
+    "message": "Date"
+  },
+  {
+    "message_key": "horaEntrada",
+    "locale": "fr",
+    "message": "Heure d'entrée"
+  },
+  {
+    "message_key": "horaSortida",
+    "locale": "fr",
+    "message": "Heure de sortie"
+  },
+  {
+    "message_key": "seleccionarEmpleat",
+    "locale": "fr",
+    "message": "Sélectionner un employé:"
+  },
+  {
+    "message_key": "filtrar",
+    "locale": "fr",
+    "message": "Filtrer"
+  },
+  {
+    "message_key": "idNomina",
+    "locale": "fr",
+    "message": "ID fiche de paie"
+  },
+  {
+    "message_key": "totalBrut",
+    "locale": "fr",
+    "message": "Total brut"
+  },
+  {
+    "message_key": "totalNet",
+    "locale": "fr",
+    "message": "Total net"
+  },
+  {
+    "message_key": "dataPagament",
+    "locale": "fr",
+    "message": "Date de paiement"
+  },
+  {
+    "message_key": "detallsNomina",
+    "locale": "fr",
+    "message": "Détails fiche de paie"
+  },
+  {
+    "message_key": "llistatFacturacio",
+    "locale": "fr",
+    "message": "Liste de facturation"
+  },
+  {
+    "message_key": "historialPagament",
+    "locale": "fr",
+    "message": "Historique des paiements"
+  },
+  {
+    "message_key": "reportsFinancer",
+    "locale": "fr",
+    "message": "Rapports financiers"
+  },
+  {
+    "message_key": "generarFactura",
+    "locale": "fr",
+    "message": "Générer des factures"
+  },
+  {
+    "message_key": "factures",
+    "locale": "fr",
+    "message": "Factures"
+  },
+  {
+    "message_key": "dataFactura",
+    "locale": "fr",
+    "message": "Date de facture"
+  },
+  {
+    "message_key": "finances.cerrarSesion",
+    "locale": "fr",
+    "message": "Se déconnecter"
+  },
+  {
+    "message_key": "seleccionarClient",
+    "locale": "fr",
+    "message": "Sélectionner un client"
+  },
+  {
+    "message_key": "nFactura",
+    "locale": "fr",
+    "message": "N° de facture"
+  },
+{
+    "message_key": "grafics",
+    "locale": "fr",
+    "message": "Graphiques"
+},
+{
+    "message_key": "descarregaManual",
+    "locale": "fr",
+    "message": "Télécharger le Manuel de l'application"
+},
+{
+    "message_key": "creadores",
+    "locale": "fr",
+    "message": "Créateurs de la page: "
+},
+{
+    "message_key": "ventasMensuales",
+    "locale": "fr",
+    "message": "Ventes Mensuelles"
+  },
+  {
+    "message_key": "VentasAnuales",
+    "locale": "fr",
+    "message": "Ventes Annuelles"
+  },
+  {
+    "message_key": "ordresCompra",
+    "locale": "fr",
+    "message": "Commandes d'Achat"
+  },
+  {
+    "message_key": "ventasSemanales",
+    "locale": "fr",
+    "message": "Ventes Hebdomadaires"
+  },
+{
+    "message_key": "filtrar",
+    "locale": "fr",
+    "message": "Filtrer"
+  },
+{
+    "message_key": "buscar",
+    "locale": "fr",
+    "message": "Rechercher"
+  },
+{
+    "message_key": "buscarValor",
+    "locale": "fr",
+    "message": "Rechercher une valeur"
+  },
+{
+    "message_key": "ordenar",
+    "locale": "fr",
+    "message": "Trier"
+  },
+{
+    "message_key": "ascendent",
+    "locale": "fr",
+    "message": "Ascendant"
+  },
+{
+    "message_key": "descendent",
+    "locale": "fr",
+    "message": "Descendant"
+  },
+{
+  "message_key": "tornar",
+  "locale": "fr",
+  "message": "Revenir"
+}
+]

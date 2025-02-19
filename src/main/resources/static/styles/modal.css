@@ -1,0 +1,95 @@
+/* Estilo para el modal */
+.modal {
+    display: none;
+    /* El modal estará oculto por defecto */
+    position: fixed;
+    /* Se coloca en una posición fija sobre la página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Ocupa todo el ancho de la ventana */
+    height: 100%;
+    /* Ocupa toda la altura de la ventana */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semi-transparente */
+    z-index: 1000;
+    /* Asegura que el modal esté sobre otros elementos */
+    justify-content: center;
+    align-items: center;
+    /* Centra el modal en la ventana */
+}
+
+.modal-content {
+    background-color: var(--color-background);
+    /* Usando variable para el fondo oscuro */
+    color: var(--color-dark);
+    /* Usando variable para el color del texto */
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    /* Ancho del formulario */
+    max-width: 100%;
+    /* Asegura que el modal no se salga de la pantalla */
+    margin: 0 auto;
+    /* Centra el modal */
+    box-shadow: var(--box-shadow);
+    /* Añadiendo sombra al modal */
+}
+
+.modal-header, .modal-footer {
+    background-color: var(--color-input-bg);
+    /* Usando el fondo oscuro para los encabezados y pies de página del modal */
+    color: var(--color-input-text);
+    /* Usando el color claro para el texto */
+}
+input, .modal-content textarea {
+    color: var(--color-input-text);
+    /* Usando un color claro para el texto de los inputs */
+    background-color: var(--color-input-bg);
+    /* Fondo oscuro en los campos de entrada */
+    border: 1px solid var(--color-border);
+    /* Borde claro */
+}
+
+input::placeholder, .modal-content textarea::placeholder {
+    color: var(--color-input-placeholder);
+    /* Coloreamos el texto de los placeholders con un tono más claro */
+}
+
+select {
+    color: var(--color-input-text);
+    background-color: var(--color-input-bg);
+    border: 1px solid var(--color-border);
+    padding: 10px;
+    border-radius: 5px;
+    /* Personaliza el borde y los bordes redondeados */
+    font-size: 1rem;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--color-button-bg);
+    /* Coloca un borde de color al seleccionar */
+}
+
+option {
+    background-color: var(--color-input-bg);
+    color: var(--color-input-text);
+    /* Los colores de fondo y texto se ajustan al tema oscuro */
+}
+
+.close {
+    color: var(--color-dark-variant);
+    /* Usando un color claro para el botón de cerrar */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--color-white);
+    text-decoration: none;
+    cursor: pointer;
+}
+ 

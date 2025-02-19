@@ -1,0 +1,17 @@
+<div class="modal-content">
+    <span class="close" id="close-edit-modal-btn">&times;</span>
+    <h2 th:text="#{editarOrdre}">Editar OrdreCompra</h2>
+    <form th:action="@{/ordreDeCompra/editar/{id}(id=${ordreCompra.id_ordre})}" method="post">
+
+        <div>
+
+            <label for="estat" th:text="#{estat}">Estat</label>
+            <select id="estat" name="estat">
+                <option th:each="estat : ${estatComanda}" th:value="${estat}" th:text="${estat}">
+                    Seleccionar...</option>
+            </select><br><br>
+
+            <button type="submit" th:text="#{update}">Actualitzar</button>
+        </div>
+    </form>
+</div>

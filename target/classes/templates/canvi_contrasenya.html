@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" th:href="@{/styles/login.css}" href="../static/styles/login.css">
+    <link rel="stylesheet" th:href="@{/styles/popupError.css}" href="../static/styles/popupError.css">
+    <meta charset="UTF-8">
+    <title>Canviar Contrasenya</title>
+    <link rel="icon" th:href="@{/imatges/logo.png}" type="image/png" sizes="32x32" S
+        media="(prefers-color-scheme: light)">
+    <link rel="icon" th:href="@{/imatges/logo1.png}" type="image/png" sizes="32x32"
+        media="(prefers-color-scheme: dark)">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-in">
+            <form th:action="@{/canviContrasenya}" method="post">
+                <h1>Has de canviar de contrasenya</h1>
+                <input type="password" id="password" name="password" placeholder="Contrasenya">
+                <input type="password" id="passwordConfirm" name="passwordConfirm"
+                    placeholder="Confirma la Contrasenya">
+                <button type="submit">Canvi de Contrasenya</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-right">
+                    <h1>Benvingut!</h1>
+                    <p>Inicia sessió a Natura Mobles</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        Les contrasenyes no coincideixen. Torna-ho a intentar.
+        <div class="progress-bar"></div>
+    </div>
+
+    <script th:src="@{/js/popupError.js}" src="../static/js/popupError.js"></script>
+</body>
+
+</html>

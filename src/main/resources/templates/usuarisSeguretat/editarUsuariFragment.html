@@ -1,0 +1,23 @@
+<div class="modal-content">
+    <span class="close" id="close-edit-modal-btn">&times;</span>
+    <h2 th:text="#{editarUsuari}">Editar Usuari</h2>
+    <form th:action="@{/usuaris/editar/{id}(id=${user.id})}" method="post">
+
+        <div>
+            <label for="username" th:text="#{addEditUsuari}">Usuari:</label>
+            <input type="text" id="username" name="username" required th:value="${user.username}"><br><br>
+
+            <select id="role" name="role">
+                <option value="" disabled th:if="${user.role == null}" selected>Seleccionar...</option>
+                <option th:each="role : ${rols}" th:value="${role}" th:text="${role}"
+                    th:selected="${user.role.name() == role.name()}">
+                </option>
+            </select>
+            <br><br>
+
+
+
+            <button type="submit" th:text="#{update}">Actualitzar</button>
+        </div>
+    </form>
+</div>

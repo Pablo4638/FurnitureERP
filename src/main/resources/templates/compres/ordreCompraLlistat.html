@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/styles/style.css" th:href="@{/styles/style.css}">
+    <link rel="stylesheet" href="../../static/styles/modal.css" th:href="@{/styles/modal.css}">
+    <link rel="stylesheet" th:href="@{/styles/popupError.css}" href="../static/styles/popupError.css">
+    <title>Ordre Compra | Natura Mobles</title>
+    <link rel="icon" th:href="@{/imatges/logo.png}" type="image/png" sizes="32x32" S
+        media="(prefers-color-scheme: light)">
+    <link rel="icon" th:href="@{/imatges/logo1.png}" type="image/png" sizes="32x32"
+        media="(prefers-color-scheme: dark)">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <a href="/taulerDeControl">
+                    <div class="logo">
+                        <img alt="Imatge amb el logo de la empresa" src="../../static/imatges/logo.png"
+                            th:src="@{/imatges/logo.png}">
+                        <h2>Natura<span class="success">Mobles</span></h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">
+                            close
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="sidebar">
+                <a href="/proveidors">
+                    <span class="material-icons-sharp">
+                        sort
+                    </span>
+                    <h3 th:text="#{llistatProveidor}">Llistat Proveïdors</h3>
+                </a>
+                <a href="/ordreDeCompra" class="active">
+                    <span class="material-icons-sharp">
+                        sort
+                    </span>
+                    <h3 th:text="#{llistatOrdres}">Llistat Ordres de compra</h3>
+                </a>
+                <a href="/ordresCompra/nova">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3 th:text="#{afegirOrdre}"></h3>
+                </a>
+                <a href="/ordreCompraHistorial">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <h3 th:text="#{historialOrdres}">Historial Ordres de compra</h3>
+                </a>
+                <a href="/login">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3 th:text="#{compres.cerrarSesion}">Tancar sessio</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <!-- Recent Orders Table -->
+            <div class="recent-orders">
+                <h2 th:text="#{ordresDeCompra}">Ordres De Compra</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col" th:text="#{proveidor}">Proveidor</th>
+                            <th scope="col" th:text="#{dataOrdre}">Data Ordre</th>
+                            <th scope="col" th:text="#{estat}">Estat</th>
+                            <th scope="col" th:text="#{total}">Total</th>
+                            <th class="th-alinear" scope="col" th:text="#{accions}">Accions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="ordreCompra : ${ordreCompres}">
+                            <td th:text="${ordreCompra.proveidor.nom}"></td>
+                            <td th:text="${#dates.format(ordreCompra.data_ordre, 'dd-MM-yyyy')}"></td>
+                            <td class="warning" th:text="${ordreCompra.estat}"></td>
+                            <td class="precio" th:text="${ordreCompra.total}"></td>
+                            <td class="td-alinear">
+                                <a th:href="@{/ordreDeCompra/{id}(id=${ordreCompra.id_ordre})}">
+                                    <span class="material-icons-sharp">
+                                        visibility
+                                    </span>
+                                </a>
+                                <a href="#" class="edit-btn" th:attr="data-ordreCompra-id=${ordreCompra.id_ordre}">
+                                    <span class="material-icons-sharp">
+                                        edit
+                                    </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+            <!-- End of Recent Orders -->
+
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+                <div class="profile-dropdown">
+                    <div class="profile" onclick="toggleDropdown()">
+                        <div class="info">
+                            <p th:text="#{saludo} + ${nomUsuari}"></p>
+                        </div>
+                        <div class="profile-photo">
+                            <img th:src="@{/fotoPerfil/{usuari}(usuari=${nomUsuari})}" />
+                        </div>
+                    </div>
+                    <div class="dropdown-menu" id="profile-dropdown-menu">
+                        <a href="/perfil" class="dropdown-item" th:text="#{perfil}">Ir a mi perfil</a>
+                        <a href="#" onclick="document.getElementById('logout-form').submit(); return false;"
+                            class="dropdown-item">
+                            <h3 th:text="#{perfil.cerrarSesion}">Tancar sessió</h3>
+                        </a>
+                        <form id="logout-form" th:action="@{/logout}" method="post" style="display: none;">
+                            <input type="submit" value="Sign Out" />
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <a href="/taulerDeControl">
+                    <div class="logo">
+                        <img src="../../static/imatges/logo.png" th:src="@{/imatges/logo.png}">
+                        <h2>Natura Mobles</h2>
+                        <p th:text="#{definicioEmpresa}"></p>
+                    </div>
+                </a>
+            </div>
+            <div class="filter-section">
+                <form th:action="@{/ordreDeCompra}" method="get">
+                    <label for="filtro" th:text="#{filtrarr}">Filtrar por:</label>
+                    <select name="filtro" id="filtro">
+                        <option value="proveidor" th:selected="${filtro == 'proveidor'}" th:text="#{proveidor}"></option>
+                        <option value="dataOrdre" th:selected="${filtro == 'dataOrdre'}" th:text="#{dataOrdre}"></option>
+                        <option value="total" th:selected="${filtro == 'total'}" th:text="#{total}"></option>
+                    </select>
+
+                    <label for="valor" th:text="#{buscar}">Buscar:</label>
+                    <input type="text" id="valor"  th:value="${valor}" name="valor" th:placeholder="#{buscarValor}">
+
+                    <label for="orden" th:text="#{ordenar}">Ordenar:</label>
+                    <select name="orden" id="orden">
+                        <option value="asc" th:selected="${orden == 'asc'}" th:text="#{ascendent}">Ascendent</option>
+                        <option value="desc" th:selected="${orden == 'desc'}" th:text="#{descendent}">Descendent</option>
+                    </select>
+
+                    <button type="submit" th:text="#{filtrarr}"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal de Editar Ordre Compra -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-edit-modal-btn">&times;</span>
+            <h2 th:text="#{editarOrdre}">Editar Ordre Compra</h2>
+            <form id="edit-form" method="post">
+                <div>
+                    <label for="estat" th:text="#{estat}">Estat:</label>
+                    <input type="text" id="estat" name="estat" required><br><br>
+
+                    <button type="submit" th:text="#{update}">Actualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script th:src="@{js/cargarProductesProveidor.js}" src="static/js/cargarProductesProveidor.js"></script>
+    <script th:src="@{js/darkmode.js}" src="static/js/darkmode.js"></script>
+    <script th:src="@{js/modaledit/modalEditOrdreCompra.js}"></script>
+    <script th:src="@{js/modaladd.js}" src="static/js/modaladd.js"></script>
+    <script th:src="@{/js/formateoPrecios.js}" src="/static/js/formateoPrecios.js"></script>
+    <script th:src="@{js/desplegable.js}" src="static/js/desplegable.js"></script>
+    <script th:src="@{/js/popupError.js}" src="../static/js/popupError.js"></script>
+
+    <div class="popup" id="popup" th:classappend="${successMessage != null || errorMessage != null} ? 'show' : ''"
+        th:styleappend="${successMessage != null} ? 'background-color: #4caf50;' : ''">
+        <p th:if="${successMessage}" th:text="${successMessage}"></p>
+        <p th:if="${errorMessage}" th:text="${errorMessage}"></p>
+        <div class="progress-bar"></div>
+    </div>
+</body>
+
+</html>

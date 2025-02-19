@@ -1,0 +1,64 @@
+.popup {
+    position: fixed;
+    top: 10px;
+    left: 13%;
+    background-color: #f44336;
+    /* Rojo */
+    color: white !important;
+    /* Asegura que el texto sea blanco */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    animation: fadeOut 4s forwards;
+}
+
+.popup p {
+    margin: 0;
+    /* Elimina márgenes predeterminados que puedan causar problemas */
+    color: inherit;
+    /* Hereda el color definido en .popup */
+}
+
+
+.popup.show {
+    display: block;
+}
+
+/* Barra de progreso */
+.progress-bar {
+    height: 5px;
+    background-color: #ffffff;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: shrink 4s linear forwards;
+}
+
+/* Animación de desaparición */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Animación de la barra de progreso */
+@keyframes shrink {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}

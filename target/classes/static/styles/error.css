@@ -1,0 +1,52 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8d7da;
+    /* Fondo rojo claro */
+    color: #721c24;
+    /* Texto rojo oscuro */
+    text-align: center;
+    animation: backgroundPulse 3s infinite;
+}
+
+/* Contenedor del mensaje */
+.container {
+    max-width: 600px;
+    /* Limita el ancho del contenedor */
+    padding: 20px;
+}
+
+/* Estilo para el título */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    /* Permite el salto de línea */
+}
+
+/* Estilo para el párrafo */
+p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+@keyframes backgroundPulse {
+    0% {
+        background-color: #f8d7da;
+    }
+
+    50% {
+        background-color: #f1b0b7;
+    }
+
+    100% {
+        background-color: #f8d7da;
+    }
+}

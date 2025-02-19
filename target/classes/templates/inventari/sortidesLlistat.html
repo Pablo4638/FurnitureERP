@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/styles/style.css" th:href="@{/styles/style.css}">
+    <title>Sortides | Natura Mobles</title>
+    <link rel="icon" th:href="@{/imatges/logo.png}" type="image/png" sizes="32x32" S
+        media="(prefers-color-scheme: light)">
+    <link rel="icon" th:href="@{/imatges/logo1.png}" type="image/png" sizes="32x32"
+        media="(prefers-color-scheme: dark)">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <a href="/taulerDeControl">
+                    <div class="logo">
+                        <img alt="Imatge amb el logo de la empresa" src="../../static/imatges/logo.png"
+                            th:src="@{/imatges/logo.png}">
+                        <h2>Natura<span class="success">Mobles</span></h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">close</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="sidebar">
+                <a href="/productes">
+                    <span class="material-icons-sharp">sort</span>
+                    <h3 th:text="#{llistatProductes}">Llistat Productes</h3>
+                </a>
+                <a href="/productes/categories">
+                    <span class="material-icons-sharp">sort</span>
+                    <h3 th:text="#{llistatCategories}">Llistat Categories</h3>
+                </a>
+                <a href="/productes/entrades">
+                    <span class="material-icons-sharp">login</span>
+                    <h3 th:text="#{entrades}">Entrades</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">output</span>
+                    <h3 th:text="#{sortides}">Sortides</h3>
+                </a>
+                <a href="/productes/hitorialMoviments"><span class="material-icons-sharp">receipt_long</span>
+                    <h3 th:text="#{historialMoviments}">Historial Moviments</h3>
+                </a>
+                <a href="#" onclick="document.getElementById('logout-form').submit(); return false;">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3 th:text="#{inventari.cerrarSesion}">Tancar sessió</h3>
+
+                    <form id="logout-form" th:action="@{/logout}" method="post" style="display: none;">
+                        <input type="submit" value="Sign Out" />
+                    </form>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <!-- Categories Table -->
+            <div class="recent-orders">
+                <h2 th:text="#{historialMoviments}">Historial Moviments</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col" th:text="#{producte}">Producte</th>
+                            <th scope="col" th:text="#{dataMoviment}">Data Moviment</th>
+                            <th scope="col" th:text="#{quantitat}">Quantitat</th>
+                            <th scope="col" th:text="#{tipusMoviment}">Tipus Moviment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="historialMoviment : ${historialMoviments}">
+                            <td th:text="${historialMoviment.producte.nom_producte}"></td>
+                            <td th:text="${#dates.format(historialMoviment.data_moviment, 'dd-MM-yyyy')}"></td>
+                            <td th:text="${historialMoviment.quanttitat}"></td>
+                            <td th:text="${historialMoviment.tipus_moviment}"></td>
+
+                            <td class="td-alinear">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End of Categories Table -->
+
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+                <div class="profile-dropdown">
+                    <div class="profile" onclick="toggleDropdown()">
+                        <div class="info">
+                            <p th:text="#{saludo} + ${nomUsuari}"></p>
+
+                        </div>
+                        <div class="profile-photo">
+                            <img th:src="@{/fotoPerfil/{usuari}(usuari=${nomUsuari})}" />
+                        </div>
+                    </div>
+                    <div class="dropdown-menu" id="profile-dropdown-menu">
+                        <a href="/perfil" class="dropdown-item" th:text="#{perfil}">Ir a mi perfil</a>
+                        <a href="#" onclick="document.getElementById('logout-form').submit(); return false;"
+                            class="dropdown-item">
+                            <h3 th:text="#{perfil.cerrarSesion}">Tancar sessió</h3>
+                        </a>
+                        <form id="logout-form" th:action="@{/logout}" method="post" style="display: none;">
+                            <input type="submit" value="Sign Out" />
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <a href="/taulerDeControl">
+                    <div class="logo">
+                        <img src="../../static/imatges/logo.png" th:src="@{/imatges/logo.png}">
+                        <h2>Natura Mobles</h2>
+                        <p th:text="#{definicioEmpresa}"></p>
+                    </div>
+                </a>
+            </div>
+            <div class="filter-section">
+                <form th:action="@{/productes/sortides}" method="get">
+                    <label for="filtro" th:text="#{filtrarr}">Filtrar por:</label>
+                    <select name="filtro" id="filtro">
+                        <option value="nom" th:selected="${filtro == 'nom'}" th:text="#{nom}"></option>
+                        <option value="dataMoviment" th:selected="${filtro == 'dataMoviment'}"
+                            th:text="#{dataMoviment}"></option>
+                        <option value="quantitat" th:selected="${filtro == 'quantitat'}" th:text="#{quantitat}">
+                        </option>
+                    </select>
+
+                    <label for="valor" th:text="#{buscar}">Buscar:</label>
+                    <input type="text" id="valor" th:value="${valor}" name="valor" th:placeholder="#{buscarValor}">
+
+                    <label for="orden" th:text="#{ordenar}">Ordenar:</label>
+                    <select name="orden" id="orden">
+                        <option value="asc" th:selected="${orden == 'asc'}" th:text="#{ascendent}">Ascendent</option>
+                        <option value="desc" th:selected="${orden == 'desc'}" th:text="#{descendent}">Descendent
+                        </option>
+                    </select>
+
+                    <button type="submit" th:text="#{filtrarr}"></button>
+                </form>
+            </div>
+        </div>
+        <!-- End of Right Section -->
+
+    </div>
+    <script th:src="@{/js/darkmode.js}" src="static/js/darkmode.js"></script>
+    <script th:src="@{/js/desplegable.js}" src="../../static/js/desplegable.js"></script>
+</body>
+
+</html>

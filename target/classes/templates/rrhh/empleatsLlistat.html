@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/styles/style.css" th:href="@{/styles/style.css}">
+    <link rel="stylesheet" href="../../static/styles/modal.css" th:href="@{/styles/modal.css}">
+    <link rel="stylesheet" th:href="@{/styles/popupError.css}" href="../static/styles/popupError.css">
+    <title>Empleats | Natura Mobles</title>
+    <link rel="icon" th:href="@{/imatges/logo.png}" type="image/png" sizes="32x32" S
+        media="(prefers-color-scheme: light)">
+    <link rel="icon" th:href="@{/imatges/logo1.png}" type="image/png" sizes="32x32"
+        media="(prefers-color-scheme: dark)">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <a href="/taulerDeControl">
+                    <div class="logo">
+                        <img alt="Imatge amb el logo de la empresa" src="../../static/imatges/logo.png"
+                            th:src="@{/imatges/logo.png}">
+                        <h2>Natura<span class="success">Mobles</span></h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">
+                            close
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        sort
+                    </span>
+                    <h3 th:text="#{llistatEmpleats}">Llistat Empleats</h3>
+                </a>
+                <a href="#" id="add-btn">
+                    <span class="material-icons-sharp">
+                        person_add
+                    </span>
+                    <h3 th:text="#{afegirEmpleat}">Afegir Empleat</h3>
+                </a>
+                <a href="/empleats/asistenciaSeleccionar">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <h3 th:text="#{registreAssistencia}">Registre D'Assistencia</h3>
+                </a>
+                <a href="/empleats/asistencia">
+                    <span class="material-icons-sharp">
+                        history
+                    </span>
+                    <h3 th:text="#{historialAssistencia}">Historial D'Assistencia</h3>
+                </a>
+                <a href="#" onclick="document.getElementById('logout-form').submit(); return false;">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3 th:text="#{rrhh.cerrarSesion}">Tancar sessió</h3>
+
+                    <form id="logout-form" th:action="@{/logout}" method="post" style="display: none;">
+                        <input type="submit" value="Sign Out" />
+                    </form>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <!-- Recent Orders Table -->
+            <div class="recent-orders">
+                <h2 th:text="#{empleats}">Empleats</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col" th:text="#{nom}">Nom</th>
+                            <th scope="col" th:text="#{email}">email</th>
+                            <th scope="col" th:text="#{telefon}">Telefon</th>
+                            <th scope="col" th:text="#{salari}">Salari</th>
+                            <th scope="col" th:text="#{dataContractacio}">Data Contractació</th>
+                            <th scope="col" th:text="#{departament}">Departament</th>
+                            <th class="th-alinear" scope="col" th:text="#{accions}">Accions</th>
+
+                    </thead>
+                    <tbody>
+                        <tr th:each="empleat : ${empleats}">
+                            <td th:text="${empleat.nom}"></td>
+                            <td th:text="${empleat.email}"></td>
+                            <td th:text="${empleat.telefon}"></td>
+                            <td class="precio" th:text="${empleat.salari}"></td>
+                            <td th:text="${#dates.format(empleat.data_contractacio, 'dd-MM-yyyy')}"></td>
+                            <td th:text="${empleat.departament}"></td>
+                            <td class="td-alinear">
+                                <a href="#" class="edit-btn" th:attr="data-empleat-id=${empleat.id_empleat}">
+                                    <span class="material-icons-sharp">
+                                        edit
+                                    </span>
+                                </a>
+                                <a th:href="@{/empleats/eliminar/{id}(id=${empleat.id_empleat})}"
+                                    onclick="return confirm('¿Estás segur que desitjas eliminar a aquesta persona?');">
+                                    <span class="material-icons-sharp">
+                                        delete
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End of Recent Orders -->
+
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+                <div class="profile-dropdown">
+                    <div class="profile" onclick="toggleDropdown()">
+                        <div class="info">
+                            <p th:text="#{saludo} + ${nomUsuari}"></p>
+                        </div>
+                        <div class="profile-photo">
+                            <img th:src="@{/fotoPerfil/{usuari}(usuari=${nomUsuari})}" />
+                        </div>
+                    </div>
+                    <div class="dropdown-menu" id="profile-dropdown-menu">
+                        <a href="/perfil" class="dropdown-item" th:text="#{perfil}">Ir a mi perfil</a>
+                        <a href="#" onclick="document.getElementById('logout-form').submit(); return false;"
+                            class="dropdown-item">
+                            <h3 th:text="#{perfil.cerrarSesion}">Tancar sessió</h3>
+                        </a>
+                        <form id="logout-form" th:action="@{/logout}" method="post" style="display: none;">
+                            <input type="submit" value="Sign Out" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <a href="/taulerDeControl">
+                    <div class="logo">
+                        <img src="../../static/imatges/logo.png" th:src="@{/imatges/logo.png}">
+                        <h2>Natura Mobles</h2>
+                        <p th:text="#{definicioEmpresa}"></p>
+                    </div>
+                </a>
+            </div>
+            <div class="filter-section">
+                <form th:action="@{/empleats}" method="get">
+                    <label for="filtro" th:text="#{filtrarr}">Filtrar por:</label>
+                    <select name="filtro" id="filtro">
+                        <option value="nom" th:selected="${filtro == 'nom'}" th:text="#{nom}"></option>
+                        <option value="email" th:selected="${filtro == 'email'}" th:text="#{email}"></option>
+                        <option value="telefon" th:selected="${filtro == 'telefon'}" th:text="#{telefon}"></option>
+                        <option value="salari" th:selected="${filtro == 'salari'}" th:text="#{salari}"></option>
+                        <option value="dataContractacio" th:selected="${filtro == 'dataContractacio'}"
+                            th:text="#{dataContractacio}"></option>
+                        <option value="departament" th:selected="${filtro == 'departament'}" th:text="#{departament}">
+                        </option>
+                    </select>
+
+                    <label for="valor" th:text="#{buscar}">Buscar:</label>
+                    <input type="text" id="valor" th:value="${valor}" name="valor" th:placeholder="#{buscarValor}">
+
+                    <label for="orden" th:text="#{ordenar}">Ordenar:</label>
+                    <select name="orden" id="orden">
+                        <option value="asc" th:selected="${orden == 'asc'}" th:text="#{ascendent}">Ascendent</option>
+                        <option value="desc" th:selected="${orden == 'desc'}" th:text="#{descendent}">Descendent
+                        </option>
+                    </select>
+
+                    <button type="submit" th:text="#{filtrarr}"></button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <!-- Modal Form to Add Empleat -->
+        <div id="add-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-modal-btn">&times;</span>
+                <h3 th:text="#{afegirEmpleat}">Afegir Empleat</h3>
+                <form action="/empleats/nou" method="post">
+                    <label for="nom" th:text="#{addEditNom}">Nom:</label>
+                    <input type="text" id="nom" name="nom" required><br><br>
+
+                    <label for="salari">Salari:</label>
+                    <input type="number" step="0.01" id="salari" name="salari" required><br><br>
+
+                    <label for="data_contractacio">Data de Contractació:</label>
+                    <input type="date" id="data_contractacio" name="data_contractacio" required><br><br>
+
+
+                    <label for="email" th:text="#{addEditEmail}">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="telefon">Telefon:</label>
+                    <input type="number" id="telefon" name="telefon" required><br><br>
+
+
+                    <label for="departament" th:text="#{addEditDepartament}">Departament:</label>
+                    <select id="departament" name="departament" required>
+                        <option value="" disable selected>Seleccionar...</option>
+                        <option th:each="departament : ${departaments}" th:value="${departament}"
+                            th:text="${departament}"></option>
+                    </select><br><br>
+
+                    <button type="submit" th:text="#{crear}">Afegir</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal de Editar Empleat -->
+        <div id="edit-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-edit-modal-btn">&times;</span>
+                <h2 th:text="#{editarEmpleat}">Editar Empleat</h2>
+                <form id="edit-form" method="post">
+                    <div>
+                        <label for="nom" th:text="#{addEditNom}">Nom:</label>
+                        <input type="text" id="nom" name="nom" required><br><br>
+
+                        <label for="email" th:text="#{addEditEmail}">E-mail:</label>
+                        <input type="text" id="email" name="email" required><br><br>
+
+                        <label for="data_contractacio">Data de Contractació:</label>
+                        <input type="date" id="data_contractacio" name="data_contractacio" required><br><br>
+
+                        <label for="telefon" th:text="#{addEditTelefon}">Telèfon:</label>
+                        <input type="text" id="telefon" name="telefon" required><br><br>
+
+                        <label for="direccio" th:text="#{addEditDireccio}">Direcció:</label>
+                        <input type="text" id="direccio" name="direccio" required><br><br>
+
+                        <button type="submit" th:text="#{update}">Actualizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="popup" id="popup" th:classappend="${successMessage != null || errorMessage != null} ? 'show' : ''"
+        th:styleappend="${successMessage != null} ? 'background-color: #4caf50;' : ''">
+        <p th:if="${successMessage}" th:text="${successMessage}"></p>
+        <p th:if="${errorMessage}" th:text="${errorMessage}"></p>
+        <div class="progress-bar"></div>
+    </div>
+</body>
+<script th:src="@{/js/popupError.js}" src="../static/js/popupError.js"></script>
+<script th:src="@{js/modaledit/modalEditEmpleat.js}" src="../../static/js/modaledit/modalEditEmpleat.js"></script>
+<script th:src="@{js/modaladd.js}" src="static/js/modaladd.js"></script>
+<script th:src="@{js/darkmode.js}" src="static/js/darkmode.js"></script>
+<script th:src="@{js/desplegable.js}" src="static/js/desplegable.js"></script>
+<script th:src="@{/js/formateoPrecios.js}" src="/static/js/formateoPrecios.js"></script>
+
+</html>
